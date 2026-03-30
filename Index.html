@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Préparez l'examen civique français avec des flashcards interactives sur les dates, chiffres et personnages clés.">
+  <title>Examen Civique — Révision Interactive</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-flag">
+        <span style="background:#002395"></span>
+        <span style="background:#fff"></span>
+        <span style="background:#ED2939"></span>
+      </div>
+      <div class="logo-text">
+        Examen Civique
+        <small>Carte de Résident (CR)</small>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <button class="nav-btn active" data-section="dates"   onclick="showSection('dates')">📅 Dates</button>
+      <button class="nav-btn"        data-section="numbers" onclick="showSection('numbers')">🔢 Chiffres</button>
+      <button class="nav-btn"        data-section="people"  onclick="showSection('people')">👤 Personnages</button>
+      <button class="nav-btn"        data-section="timeline"onclick="showSection('timeline')">📜 Chronologie</button>
+    </nav>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-tricolor">
+    <span style="background:#002395"></span>
+    <span style="background:#fff;opacity:0.3"></span>
+    <span style="background:#ED2939"></span>
+  </div>
+  <h1>Révisez pour<br><em>l'Examen Civique</em></h1>
+  <p>Flashcards, quiz et chronologie — tout ce qu'il faut pour réussir avec 80% ou plus.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num">18</div>
+      <div class="hero-stat-label">Dates clés</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">19</div>
+      <div class="hero-stat-label">Chiffres essentiels</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">21</div>
+      <div class="hero-stat-label">Personnages historiques</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">80%</div>
+      <div class="hero-stat-label">Score à atteindre</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── MAIN ── -->
+<main class="main">
+
+  <!-- ════════════════════════════════
+       SECTION: DATES
+  ════════════════════════════════ -->
+  <section id="sec-dates" class="section active">
+    <div class="section-header">
+      <div class="section-title">
+        <span>Section 1</span>
+        Dates historiques
+      </div>
+    </div>
+
+    <div class="sub-tabs">
+      <button class="sub-tab active" data-mode="flashcard" onclick="showSubMode('dates','flashcard')">Flashcards</button>
+      <button class="sub-tab"        data-mode="gallery"   onclick="showSubMode('dates','gallery')">Tableau</button>
+      <button class="sub-tab"        data-mode="quiz"      onclick="showSubMode('dates','quiz')">Quiz</button>
+    </div>
+
+    <!-- Flashcard panel -->
+    <div class="sub-panel active" data-panel="flashcard">
+      <div id="filters-dates" class="filters"></div>
+
+      <div class="progress-container">
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill-dates" style="width:0%;background:var(--accent)"></div>
+        </div>
+      </div>
+
+      <div id="score-bar-dates" class="score-bar"></div>
+
+      <div class="flashcard-area">
+        <div class="card-counter" id="card-counter-dates">1 / —</div>
+
+        <div class="card-scene" id="card-scene-dates" onclick="flipCard('dates')">
+          <div class="card-el" id="card-el-dates">
+            <div class="card-front"></div>
+            <div class="card-back"></div>
+          </div>
+        </div>
+
+        <p class="card-hint" id="card-hint-dates">Cliquez sur la carte pour révéler</p>
+
+        <div class="mark-row" id="mark-row-dates" style="display:none">
+          <button class="mark-btn review" onclick="markCard('dates', false)">À revoir</button>
+          <button class="mark-btn know"   onclick="markCard('dates', true)">Je sais !</button>
+        </div>
+
+        <div class="card-nav">
+          <button class="nav-arrow" onclick="prevCard('dates')">← Précédent</button>
+          <div class="card-progress-wrap">
+            <div class="card-progress-fill" id="card-progress-fill-dates" style="width:0%"></div>
+          </div>
+          <button class="nav-arrow" onclick="nextCard('dates')">Suivant →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery panel -->
+    <div class="sub-panel" data-panel="gallery">
+      <div id="gallery-dates"></div>
+    </div>
+
+    <!-- Quiz panel -->
+    <div class="sub-panel" data-panel="quiz">
+      <div class="quiz-wrap">
+        <div id="quiz-dates"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       SECTION: NUMBERS
+  ════════════════════════════════ -->
+  <section id="sec-numbers" class="section">
+    <div class="section-header">
+      <div class="section-title">
+        <span>Section 2</span>
+        Chiffres essentiels
+      </div>
+    </div>
+
+    <div class="sub-tabs">
+      <button class="sub-tab active" data-mode="flashcard" onclick="showSubMode('numbers','flashcard')">Flashcards</button>
+      <button class="sub-tab"        data-mode="gallery"   onclick="showSubMode('numbers','gallery')">Tableau</button>
+      <button class="sub-tab"        data-mode="quiz"      onclick="showSubMode('numbers','quiz')">Quiz</button>
+    </div>
+
+    <div class="sub-panel active" data-panel="flashcard">
+      <div id="filters-numbers" class="filters"></div>
+      <div class="progress-container">
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill-numbers" style="width:0%;background:var(--accent)"></div>
+        </div>
+      </div>
+      <div id="score-bar-numbers" class="score-bar"></div>
+      <div class="flashcard-area">
+        <div class="card-counter" id="card-counter-numbers">1 / —</div>
+        <div class="card-scene" id="card-scene-numbers" onclick="flipCard('numbers')">
+          <div class="card-el" id="card-el-numbers">
+            <div class="card-front"></div>
+            <div class="card-back"></div>
+          </div>
+        </div>
+        <p class="card-hint" id="card-hint-numbers">Cliquez sur la carte pour révéler</p>
+        <div class="mark-row" id="mark-row-numbers" style="display:none">
+          <button class="mark-btn review" onclick="markCard('numbers', false)">À revoir</button>
+          <button class="mark-btn know"   onclick="markCard('numbers', true)">Je sais !</button>
+        </div>
+        <div class="card-nav">
+          <button class="nav-arrow" onclick="prevCard('numbers')">← Précédent</button>
+          <div class="card-progress-wrap">
+            <div class="card-progress-fill" id="card-progress-fill-numbers" style="width:0%"></div>
+          </div>
+          <button class="nav-arrow" onclick="nextCard('numbers')">Suivant →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-panel" data-panel="gallery">
+      <div id="gallery-numbers"></div>
+    </div>
+
+    <div class="sub-panel" data-panel="quiz">
+      <div class="quiz-wrap">
+        <div id="quiz-numbers"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       SECTION: PEOPLE
+  ════════════════════════════════ -->
+  <section id="sec-people" class="section">
+    <div class="section-header">
+      <div class="section-title">
+        <span>Section 3</span>
+        Personnages historiques
+      </div>
+    </div>
+
+    <div class="sub-tabs">
+      <button class="sub-tab active" data-mode="flashcard" onclick="showSubMode('people','flashcard')">Flashcards</button>
+      <button class="sub-tab"        data-mode="gallery"   onclick="showSubMode('people','gallery')">Galerie</button>
+      <button class="sub-tab"        data-mode="quiz"      onclick="showSubMode('people','quiz')">Quiz</button>
+    </div>
+
+    <div class="sub-panel active" data-panel="flashcard">
+      <div id="filters-people" class="filters"></div>
+      <div class="progress-container">
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill-people" style="width:0%;background:var(--red)"></div>
+        </div>
+      </div>
+      <div id="score-bar-people" class="score-bar"></div>
+      <div class="flashcard-area">
+        <div class="card-counter" id="card-counter-people">1 / —</div>
+        <div class="card-scene" id="card-scene-people" onclick="flipCard('people')">
+          <div class="card-el" id="card-el-people">
+            <div class="card-front"></div>
+            <div class="card-back"></div>
+          </div>
+        </div>
+        <p class="card-hint" id="card-hint-people">Cliquez sur la carte pour révéler</p>
+        <div class="mark-row" id="mark-row-people" style="display:none">
+          <button class="mark-btn review" onclick="markCard('people', false)">À revoir</button>
+          <button class="mark-btn know"   onclick="markCard('people', true)">Je sais !</button>
+        </div>
+        <div class="card-nav">
+          <button class="nav-arrow" onclick="prevCard('people')">← Précédent</button>
+          <div class="card-progress-wrap">
+            <div class="card-progress-fill" id="card-progress-fill-people" style="width:0%"></div>
+          </div>
+          <button class="nav-arrow" onclick="nextCard('people')">Suivant →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-panel" data-panel="gallery">
+      <div id="gallery-people"></div>
+    </div>
+
+    <div class="sub-panel" data-panel="quiz">
+      <div class="quiz-wrap">
+        <div id="quiz-people"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       SECTION: TIMELINE
+  ════════════════════════════════ -->
+  <section id="sec-timeline" class="section">
+    <div class="section-header">
+      <div class="section-title">
+        <span>Section 4</span>
+        Chronologie de la France
+      </div>
+    </div>
+    <div class="timeline" id="timeline-container"></div>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer style="background:var(--text);color:rgba(255,255,255,0.4);text-align:center;padding:1.5rem;font-size:0.75rem;">
+  Examen Civique — Carte de Résident (CR) · Contenu basé sur les questions officielles du Ministère de l'Intérieur
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
