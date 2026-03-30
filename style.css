@@ -104,27 +104,53 @@ body {
 .nav-btn:hover  { background: rgba(255,255,255,0.1); color: #fff; }
 .nav-btn.active { background: rgba(255,255,255,0.18); color: #fff; }
 
-/* Lang toggle */
-.lang-btn {
+/* Lang toggle switch */
+.lang-switch {
   display: flex;
   align-items: center;
-  gap: 4px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 8px;
-  padding: 5px 10px;
+  gap: 6px;
   cursor: pointer;
-  color: #fff;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 600;
-  transition: var(--ease);
   flex-shrink: 0;
-  min-height: 36px;
+  padding: 4px 2px;
+  border-radius: 99px;
+  outline: none;
 }
-.lang-btn:hover { background: rgba(255,255,255,0.2); }
-.lang-icon { font-size: 1rem; line-height: 1; }
-.lang-label { letter-spacing: 0.05em; }
+.lang-switch:focus-visible {
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.5);
+}
+.lang-flag {
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  opacity: 0.45;
+  display: block;
+}
+.lang-flag.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.lang-track {
+  width: 36px;
+  height: 20px;
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.25);
+  border-radius: 99px;
+  position: relative;
+  transition: background 0.25s ease;
+  flex-shrink: 0;
+}
+.lang-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 13px;
+  height: 13px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+.lang-thumb.en { transform: translateX(16px); }
 
 /* ════════ HERO ════════ */
 .hero {
@@ -400,39 +426,185 @@ body {
   line-height: 1.6;
 }
 
-.footer-text { margin-bottom: 0.75rem; }
+.footer-text { margin-bottom: 1rem; }
 
-.tip-link {
+.footer-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tipeee-wrap {
+  display: flex;
+  align-items: center;
+  /* The Tipeee widget sets its own height (~40px line mode).
+     We just need to contain and centre it. */
+}
+.tipeee-wrap iframe,
+.tipeee-wrap > a {
+  /* Fallback styling while the widget script loads */
   display: inline-flex;
   align-items: center;
   gap: 6px;
   color: var(--gold);
   text-decoration: none;
   font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  padding: 8px 18px;
+  font-weight: 500;
+  padding: 8px 14px;
   border-radius: 99px;
-  border: 1.5px solid rgba(200,169,110,0.4);
+  border: 1.5px solid rgba(200,169,110,0.35);
+}
+
+.report-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.18);
+  border-radius: 99px;
+  padding: 8px 16px;
+  color: rgba(255,255,255,0.5);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
   transition: var(--ease);
 }
-.tip-link:hover {
-  background: rgba(200,169,110,0.12);
-  border-color: var(--gold);
-  color: #e0c27a;
+.report-btn:hover {
+  border-color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.06);
 }
-.tip-heart {
-  font-size: 0.9rem;
+
+/* ════════ MODAL ════════ */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.modal-backdrop.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  width: 100%;
+  max-width: 480px;
+  transform: translateY(16px) scale(0.97);
+  transition: transform 0.28s cubic-bezier(0.4,0,0.2,1);
+}
+.modal-backdrop.open .modal {
+  transform: translateY(0) scale(1);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem 0;
+}
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: var(--text3);
+  cursor: pointer;
   line-height: 1;
-  animation: heartbeat 1.8s ease-in-out infinite;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: var(--ease);
 }
-@keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  14%       { transform: scale(1.25); }
-  28%       { transform: scale(1); }
-  42%       { transform: scale(1.15); }
-  56%       { transform: scale(1); }
+.modal-close:hover { background: var(--surface2); color: var(--text); }
+
+.modal-body {
+  padding: 1rem 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
+.modal-desc {
+  font-size: 0.83rem;
+  color: var(--text2);
+  margin-bottom: 0.25rem;
+  line-height: 1.5;
+}
+.modal-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text2);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.modal-input,
+.modal-textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  color: var(--text);
+  background: var(--bg);
+  outline: none;
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+.modal-input:focus,
+.modal-textarea:focus { border-color: var(--accent); }
+.modal-textarea { min-height: 100px; }
+
+.modal-footer {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  padding: 1.25rem 1.5rem;
+}
+.modal-cancel {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 9px 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  color: var(--text2);
+  cursor: pointer;
+  transition: var(--ease);
+}
+.modal-cancel:hover { background: var(--surface2); }
+.modal-send {
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  padding: 9px 24px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: var(--ease);
+}
+.modal-send:hover { background: #0f2a52; }
 
 /* ════════ TIMELINE ════════ */
 .timeline-wrap {
