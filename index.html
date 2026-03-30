@@ -22,9 +22,9 @@
       </div>
     </div>
     <nav class="nav">
-      <button class="nav-btn active" data-sec="dates"   onclick="showSection('dates')">📅 Dates</button>
-      <button class="nav-btn"        data-sec="numbers" onclick="showSection('numbers')">🔢 Chiffres</button>
-      <button class="nav-btn"        data-sec="people"  onclick="showSection('people')">👤 Personnages</button>
+      <button class="nav-btn active" data-sec="dates">📅 Dates</button>
+      <button class="nav-btn"        data-sec="numbers">🔢 Chiffres</button>
+      <button class="nav-btn"        data-sec="people">👤 Personnages</button>
     </nav>
   </div>
 </header>
@@ -47,7 +47,7 @@
 
 <main class="main">
 
-  <!-- DATES -->
+  <!-- ── DATES ── -->
   <section id="sec-dates" class="section active">
     <div class="sec-header">
       <div class="sec-title"><span>Section 1</span>Dates historiques</div>
@@ -57,7 +57,7 @@
         <span id="counter-dates" class="counter">1 / 18</span>
         <div class="prog-track"><div id="prog-dates" class="prog-fill" style="width:6%"></div></div>
       </div>
-      <div class="card-scene" onclick="flip('dates')">
+      <div class="card-scene">
         <div class="card" id="card-dates">
           <div class="card-front" id="front-dates"></div>
           <div class="card-back"  id="back-dates"></div>
@@ -65,13 +65,13 @@
       </div>
       <p class="hint" id="hint-dates">Cliquez sur la carte pour révéler</p>
       <div class="card-nav">
-        <button class="btn-nav" onclick="prev('dates')">← Précédent</button>
-        <button class="btn-nav" onclick="next('dates')">Suivant →</button>
+        <button class="btn-nav" id="btn-prev-dates">← Précédent</button>
+        <button class="btn-nav" id="btn-next-dates">Suivant →</button>
       </div>
     </div>
   </section>
 
-  <!-- NUMBERS -->
+  <!-- ── NUMBERS ── -->
   <section id="sec-numbers" class="section">
     <div class="sec-header">
       <div class="sec-title"><span>Section 2</span>Chiffres essentiels</div>
@@ -81,7 +81,7 @@
         <span id="counter-numbers" class="counter">1 / 18</span>
         <div class="prog-track"><div id="prog-numbers" class="prog-fill" style="width:6%"></div></div>
       </div>
-      <div class="card-scene" onclick="flip('numbers')">
+      <div class="card-scene">
         <div class="card" id="card-numbers">
           <div class="card-front" id="front-numbers"></div>
           <div class="card-back"  id="back-numbers"></div>
@@ -89,13 +89,13 @@
       </div>
       <p class="hint" id="hint-numbers">Cliquez sur la carte pour révéler</p>
       <div class="card-nav">
-        <button class="btn-nav" onclick="prev('numbers')">← Précédent</button>
-        <button class="btn-nav" onclick="next('numbers')">Suivant →</button>
+        <button class="btn-nav" id="btn-prev-numbers">← Précédent</button>
+        <button class="btn-nav" id="btn-next-numbers">Suivant →</button>
       </div>
     </div>
   </section>
 
-  <!-- PEOPLE -->
+  <!-- ── PEOPLE ── -->
   <section id="sec-people" class="section">
     <div class="sec-header">
       <div class="sec-title"><span>Section 3</span>Personnages historiques</div>
@@ -105,7 +105,7 @@
         <span id="counter-people" class="counter">1 / 21</span>
         <div class="prog-track"><div id="prog-people" class="prog-fill" style="width:5%"></div></div>
       </div>
-      <div class="card-scene" onclick="flip('people')">
+      <div class="card-scene">
         <div class="card" id="card-people">
           <div class="card-front" id="front-people"></div>
           <div class="card-back"  id="back-people"></div>
@@ -113,8 +113,8 @@
       </div>
       <p class="hint" id="hint-people">Cliquez sur la carte pour révéler</p>
       <div class="card-nav">
-        <button class="btn-nav" onclick="prev('people')">← Précédent</button>
-        <button class="btn-nav" onclick="next('people')">Suivant →</button>
+        <button class="btn-nav" id="btn-prev-people">← Précédent</button>
+        <button class="btn-nav" id="btn-next-people">Suivant →</button>
       </div>
     </div>
   </section>
@@ -122,7 +122,7 @@
 </main>
 
 <footer class="footer">
-  Examen Civique · Carte de Résident (CR) · Contenu basé sur les questions officielles du Ministère de l'Intérieur
+  Examen Civique · Carte de Résident (CR) · Basé sur les questions officielles du Ministère de l'Intérieur
 </footer>
 
 <script src="script.js"></script>
