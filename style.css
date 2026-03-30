@@ -11,16 +11,13 @@
   --text3:     #A09890;
   --accent:    #1A3A6B;
   --gold:      #C8A96E;
-  --red:       #9B2335;
   --radius:    14px;
-  --shadow:    0 4px 24px rgba(28,26,23,0.10);
-  --shadow-lg: 0 8px 40px rgba(28,26,23,0.16);
+  --shadow-lg: 0 8px 40px rgba(28,26,23,0.14);
   --ease:      0.3s cubic-bezier(0.4,0,0.2,1);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--bg);
@@ -29,7 +26,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── Header ── */
+/* ════════ HEADER ════════ */
 .site-header {
   background: var(--text);
   position: sticky;
@@ -41,81 +38,112 @@ body {
 .header-inner {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
-  gap: 1rem;
+  height: 56px;
+  gap: 0.5rem;
 }
 
-.logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-
+/* Logo */
+.logo { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
 .flag {
   display: flex;
-  width: 26px;
-  height: 18px;
-  border-radius: 3px;
+  width: 24px;
+  height: 17px;
+  border-radius: 2px;
   overflow: hidden;
   flex-shrink: 0;
 }
 .flag span { flex: 1; }
-
 .logo-text {
   font-family: 'Playfair Display', serif;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #fff;
   line-height: 1.2;
+  white-space: nowrap;
 }
 .logo-text small {
   display: block;
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.62rem;
+  font-size: 0.58rem;
   font-weight: 400;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.45);
 }
 
-/* ── Nav ── */
-.nav { display: flex; gap: 4px; }
+/* Nav */
+.nav {
+  display: flex;
+  gap: 2px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  flex: 1;
+  justify-content: center;
+}
+.nav::-webkit-scrollbar { display: none; }
 
 .nav-btn {
   background: transparent;
   border: none;
   color: rgba(255,255,255,0.55);
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 500;
-  padding: 7px 13px;
+  padding: 7px 10px;
   border-radius: 8px;
   cursor: pointer;
   transition: var(--ease);
   white-space: nowrap;
+  min-height: 40px;
 }
 .nav-btn:hover  { background: rgba(255,255,255,0.1); color: #fff; }
 .nav-btn.active { background: rgba(255,255,255,0.18); color: #fff; }
 
-/* ── Hero ── */
+/* Lang toggle */
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: var(--ease);
+  flex-shrink: 0;
+  min-height: 36px;
+}
+.lang-btn:hover { background: rgba(255,255,255,0.2); }
+.lang-icon { font-size: 1rem; line-height: 1; }
+.lang-label { letter-spacing: 0.05em; }
+
+/* ════════ HERO ════════ */
 .hero {
   background: var(--text);
   color: #fff;
-  padding: 3.5rem 1.25rem 2.5rem;
+  padding: 3rem 1.25rem 2.25rem;
   text-align: center;
 }
-
 .tricolor {
   display: flex;
   justify-content: center;
   gap: 5px;
   margin-bottom: 1.25rem;
 }
-.tricolor span { width: 7px; height: 36px; border-radius: 4px; }
+.tricolor span { width: 6px; height: 32px; border-radius: 3px; }
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(1.8rem, 5vw, 2.9rem);
+  font-size: clamp(1.7rem, 5vw, 2.8rem);
   font-weight: 700;
   line-height: 1.15;
   margin-bottom: 0.875rem;
@@ -123,89 +151,89 @@ body {
 .hero h1 em { font-style: italic; color: var(--gold); }
 
 .hero p {
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.6);
-  max-width: 480px;
-  margin: 0 auto 2rem;
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.58);
+  max-width: 460px;
+  margin: 0 auto 1.75rem;
   line-height: 1.6;
 }
 
 .hero-stats {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.75rem;
   flex-wrap: wrap;
 }
 .hero-stat { text-align: center; }
 .stat-num {
   font-family: 'Playfair Display', serif;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--gold);
   line-height: 1;
   margin-bottom: 3px;
 }
 .stat-label {
-  font-size: 0.67rem;
+  font-size: 0.65rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.38);
 }
 
-/* ── Main ── */
+/* ════════ MAIN ════════ */
 .main {
   max-width: 900px;
   margin: 0 auto;
-  padding: 2.5rem 1.25rem 5rem;
+  padding: 2.25rem 1.25rem 5rem;
 }
 
-/* ── Sections ── */
+/* Sections */
 .section { display: none; }
-.section.active {
-  display: block;
-  animation: fadeUp 0.35s ease;
-}
+.section.active { display: block; animation: fadeUp 0.32s ease; }
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.sec-header { margin-bottom: 1.75rem; }
-
+.sec-header { margin-bottom: 1.5rem; }
 .sec-title {
   font-family: 'Playfair Display', serif;
-  font-size: 1.55rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
-.sec-title span {
-  display: block;
+.sec-title > span:first-child {
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text3);
-  margin-bottom: 4px;
+}
+.sec-name { /* the big title word */ }
+
+/* ════════ DECK ════════ */
+.deck-wrap {
+  max-width: 580px;
+  margin: 0 auto;
 }
 
-/* ── Deck wrapper ── */
-.deck-wrap { max-width: 600px; margin: 0 auto; }
-
-/* ── Counter + progress ── */
+/* Counter + progress */
 .counter-row {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   margin-bottom: 0.75rem;
 }
 .counter {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--text3);
   font-weight: 500;
-  letter-spacing: 0.04em;
   flex-shrink: 0;
-  min-width: 44px;
+  min-width: 46px;
 }
 .prog-track {
   flex: 1;
@@ -218,29 +246,36 @@ body {
   height: 100%;
   background: var(--accent);
   border-radius: 2px;
-  transition: width 0.4s ease;
+  transition: width 0.35s ease;
 }
 
-/* ── Card scene (3-D flip container) ── */
+/* ════════ CARD SCENE ════════ */
 .card-scene {
-  perspective: 1100px;
-  height: 260px;
+  perspective: 1200px;
+  /* Height adapts to content on mobile via min-height */
+  min-height: 220px;
+  height: auto;
   cursor: pointer;
   margin-bottom: 0.75rem;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
+  /* Let it grow tall enough for longer text */
+  position: relative;
 }
 
-@media (max-width: 500px) {
-  .card-scene { height: 300px; }
-}
+/*
+  The card itself uses absolute positioning for the flip pair,
+  but the scene needs a fixed height for the perspective to work.
+  We use a fixed height on desktop and a taller one on mobile.
+*/
+.card-scene { height: 240px; }
 
 .card {
   width: 100%;
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.52s cubic-bezier(0.4,0,0.2,1);
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
 }
 .card.flipped { transform: rotateY(180deg); }
 
@@ -255,28 +290,26 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 2.25rem;
+  padding: 1.75rem 1.5rem;
   text-align: center;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
-/* Front */
 .card-front {
   background: var(--surface);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-lg);
 }
 .card-front::after {
-  content: 'Cliquez pour révéler ↓';
+  content: attr(data-hint);
   position: absolute;
-  bottom: 1.1rem;
-  font-size: 0.65rem;
+  bottom: 0.875rem;
+  font-size: 0.62rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text3);
 }
 
-/* Back */
 .card-back {
   background: var(--text);
   border: 1px solid #000;
@@ -284,68 +317,66 @@ body {
   transform: rotateY(180deg);
 }
 
-/* Front content classes */
+/* Front text */
 .c-eyebrow {
-  font-size: 0.65rem;
+  font-size: 0.63rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text3);
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.5rem;
 }
 .c-value {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  font-size: clamp(1.5rem, 5vw, 2.4rem);
   font-weight: 700;
   color: var(--text);
   line-height: 1.15;
 }
 .c-dates {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text2);
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;
 }
 
-/* Back content classes */
+/* Back text */
 .c-answer {
-  font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+  font-size: clamp(0.88rem, 2.5vw, 1rem);
   font-weight: 500;
   color: #fff;
-  line-height: 1.5;
-  margin-bottom: 1rem;
+  line-height: 1.55;
+  margin-bottom: 0.875rem;
 }
 .c-memo {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-style: italic;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.52);
   line-height: 1.5;
-  padding: 0.6rem 1rem;
+  padding: 0.5rem 0.875rem;
   border-radius: 8px;
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.12);
-  max-width: 100%;
 }
 
-/* ── Hint ── */
+/* Hint */
 .hint {
   text-align: center;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: var(--text3);
-  min-height: 1.2em;
-  margin-bottom: 1rem;
+  min-height: 1.1em;
+  margin-bottom: 0.875rem;
 }
 
-/* ── Navigation buttons ── */
+/* Nav buttons */
 .card-nav {
   display: flex;
   gap: 10px;
-  justify-content: center;
 }
 .btn-nav {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 10px 28px;
+  padding: 12px 20px;
   font-family: 'DM Sans', sans-serif;
   font-size: 0.88rem;
   font-weight: 500;
@@ -353,34 +384,174 @@ body {
   cursor: pointer;
   transition: var(--ease);
   flex: 1;
-  max-width: 200px;
+  /* Big enough touch targets */
+  min-height: 48px;
 }
-.btn-nav:hover {
-  background: var(--surface2);
-  border-color: var(--accent);
-  color: var(--accent);
-}
+.btn-nav:hover  { background: var(--surface2); border-color: var(--accent); color: var(--accent); }
 .btn-nav:active { transform: scale(0.97); }
 
-/* ── Footer ── */
+/* ════════ FOOTER ════════ */
 .footer {
   background: var(--text);
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.32);
   text-align: center;
-  padding: 1.25rem;
-  font-size: 0.72rem;
+  padding: 1.5rem 1rem;
+  font-size: 0.7rem;
+  line-height: 1.6;
 }
 
-/* ── Responsive ── */
-@media (max-width: 600px) {
-  .header-inner { height: 54px; }
-  .logo-text { font-size: 0.9rem; }
-  .nav-btn { font-size: 0.73rem; padding: 6px 9px; }
-  .hero { padding: 2.5rem 1rem 2rem; }
-  .main { padding: 1.75rem 1rem 4rem; }
-  .card-front, .card-back { padding: 1.5rem; }
-  .c-value { font-size: 1.7rem; }
-  .btn-nav { padding: 10px 16px; font-size: 0.82rem; }
-  .hero-stats { gap: 1.25rem; }
-  .stat-num { font-size: 1.4rem; }
+.footer-text { margin-bottom: 0.75rem; }
+
+.tip-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 8px 18px;
+  border-radius: 99px;
+  border: 1.5px solid rgba(200,169,110,0.4);
+  transition: var(--ease);
+}
+.tip-link:hover {
+  background: rgba(200,169,110,0.12);
+  border-color: var(--gold);
+  color: #e0c27a;
+}
+.tip-heart {
+  font-size: 0.9rem;
+  line-height: 1;
+  animation: heartbeat 1.8s ease-in-out infinite;
+}
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  14%       { transform: scale(1.25); }
+  28%       { transform: scale(1); }
+  42%       { transform: scale(1.15); }
+  56%       { transform: scale(1); }
+}
+
+/* ════════ TIMELINE ════════ */
+.timeline-wrap {
+  max-width: 700px;
+}
+
+.tl-item {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+
+.tl-year {
+  width: 100px;
+  flex-shrink: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-align: right;
+  padding: 12px 16px 12px 0;
+  line-height: 1.3;
+}
+
+.tl-spine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22px;
+  flex-shrink: 0;
+}
+
+.tl-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-top: 17px;
+  flex-shrink: 0;
+}
+
+.tl-line {
+  width: 2px;
+  flex: 1;
+  background: var(--border);
+  margin-top: 4px;
+}
+
+.tl-content {
+  padding: 10px 0 20px 16px;
+  flex: 1;
+}
+
+.tl-event {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.45;
+  margin-bottom: 4px;
+}
+
+.tl-memo {
+  font-size: 0.76rem;
+  color: var(--text3);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* ════════ MOBILE ════════ */
+@media (max-width: 480px) {
+
+  /* Header: stack logo + nav vertically on very small screens */
+  .header-inner {
+    height: auto;
+    padding: 0.5rem 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .logo { order: 1; }
+  .lang-btn { order: 2; }
+  .nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    padding-bottom: 0.4rem;
+    gap: 2px;
+  }
+  .nav-btn { font-size: 0.68rem; padding: 6px 7px; min-height: 36px; }
+  .logo-text { font-size: 0.88rem; }
+  .logo-text small { display: none; }
+
+  /* Hero */
+  .hero { padding: 2rem 1rem 1.75rem; }
+  .hero h1 { font-size: 1.6rem; }
+  .hero-stats { gap: 1rem; }
+  .stat-num { font-size: 1.35rem; }
+
+  /* Main */
+  .main { padding: 1.5rem 0.875rem 4rem; }
+  .sec-title { font-size: 1.25rem; }
+
+  /* Cards */
+  .card-scene { height: 280px; }
+  .card-front, .card-back { padding: 1.25rem 1.1rem; }
+  .c-value { font-size: 1.5rem; }
+  .c-answer { font-size: 0.85rem; }
+  .c-memo { font-size: 0.75rem; }
+
+  /* Buttons */
+  .btn-nav { font-size: 0.82rem; padding: 12px 12px; }
+
+  /* Timeline */
+  .tl-year { width: 72px; font-size: 0.78rem; padding-right: 10px; }
+  .tl-content { padding-left: 10px; }
+  .tl-event { font-size: 0.82rem; }
+  .tl-memo { font-size: 0.72rem; }
+}
+
+@media (max-width: 360px) {
+  .card-scene { height: 300px; }
+  .nav-btn { font-size: 0.63rem; padding: 5px 5px; }
+  .tl-year { width: 58px; font-size: 0.72rem; }
 }
