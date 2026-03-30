@@ -8,8 +8,10 @@
 </head>
 <body>
 
+<!-- ══════════════════ HEADER ══════════════════ -->
 <header class="site-header">
   <div class="header-inner">
+
     <div class="logo">
       <div class="flag">
         <span style="background:#002395"></span>
@@ -18,39 +20,70 @@
       </div>
       <div class="logo-text">
         Examen Civique
-        <small>Carte de Résident · CR</small>
+        <small data-fr="Carte de Résident · CR" data-en="Resident Card · CR">Carte de Résident · CR</small>
       </div>
     </div>
+
     <nav class="nav">
-      <button class="nav-btn active" data-sec="dates">📅 Dates</button>
-      <button class="nav-btn"        data-sec="numbers">🔢 Chiffres</button>
-      <button class="nav-btn"        data-sec="people">👤 Personnages</button>
+      <button class="nav-btn active" data-sec="dates"    data-fr="📅 Dates"         data-en="📅 Dates">📅 Dates</button>
+      <button class="nav-btn"        data-sec="numbers"  data-fr="🔢 Chiffres"      data-en="🔢 Numbers">🔢 Chiffres</button>
+      <button class="nav-btn"        data-sec="people"   data-fr="👤 Personnages"   data-en="👤 People">👤 Personnages</button>
+      <button class="nav-btn"        data-sec="timeline" data-fr="📜 Chronologie"   data-en="📜 Timeline">📜 Chronologie</button>
     </nav>
+
+    <button class="lang-btn" id="lang-toggle" aria-label="Switch language">
+      <span class="lang-icon">🇬🇧</span>
+      <span class="lang-label">EN</span>
+    </button>
+
   </div>
 </header>
 
+<!-- ══════════════════ HERO ══════════════════ -->
 <div class="hero">
   <div class="tricolor">
     <span style="background:#002395"></span>
     <span style="background:rgba(255,255,255,0.25)"></span>
     <span style="background:#ED2939"></span>
   </div>
-  <h1>Révisez pour<br><em>l'Examen Civique</em></h1>
-  <p>Flashcards interactives — cliquez pour révéler, naviguez à votre rythme.</p>
+  <h1 data-fr="Révisez pour<br><em>l'Examen Civique</em>"
+      data-en="Study for the<br><em>Civic Exam</em>">
+    Révisez pour<br><em>l'Examen Civique</em>
+  </h1>
+  <p data-fr="Flashcards interactives — cliquez pour révéler, naviguez à votre rythme."
+     data-en="Interactive flashcards — click to reveal, navigate at your own pace.">
+    Flashcards interactives — cliquez pour révéler, naviguez à votre rythme.
+  </p>
   <div class="hero-stats">
-    <div class="hero-stat"><div class="stat-num">18</div><div class="stat-label">Dates clés</div></div>
-    <div class="hero-stat"><div class="stat-num">18</div><div class="stat-label">Chiffres essentiels</div></div>
-    <div class="hero-stat"><div class="stat-num">21</div><div class="stat-label">Personnages</div></div>
-    <div class="hero-stat"><div class="stat-num">80%</div><div class="stat-label">Score requis</div></div>
+    <div class="hero-stat">
+      <div class="stat-num">18</div>
+      <div class="stat-label" data-fr="Dates clés" data-en="Key dates">Dates clés</div>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-num">18</div>
+      <div class="stat-label" data-fr="Chiffres essentiels" data-en="Key numbers">Chiffres essentiels</div>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-num">21</div>
+      <div class="stat-label" data-fr="Personnages" data-en="People">Personnages</div>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-num">80%</div>
+      <div class="stat-label" data-fr="Score requis" data-en="Pass mark">Score requis</div>
+    </div>
   </div>
 </div>
 
+<!-- ══════════════════ MAIN ══════════════════ -->
 <main class="main">
 
   <!-- ── DATES ── -->
   <section id="sec-dates" class="section active">
     <div class="sec-header">
-      <div class="sec-title"><span>Section 1</span>Dates historiques</div>
+      <div class="sec-title">
+        <span data-fr="Section 1" data-en="Section 1">Section 1</span>
+        <span class="sec-name" data-fr="Dates historiques" data-en="Historical dates">Dates historiques</span>
+      </div>
     </div>
     <div class="deck-wrap">
       <div class="counter-row">
@@ -63,10 +96,10 @@
           <div class="card-back"  id="back-dates"></div>
         </div>
       </div>
-      <p class="hint" id="hint-dates">Cliquez sur la carte pour révéler</p>
+      <p class="hint" id="hint-dates"></p>
       <div class="card-nav">
-        <button class="btn-nav" id="btn-prev-dates">← Précédent</button>
-        <button class="btn-nav" id="btn-next-dates">Suivant →</button>
+        <button class="btn-nav" id="btn-prev-dates" data-fr="← Précédent" data-en="← Previous">← Précédent</button>
+        <button class="btn-nav" id="btn-next-dates" data-fr="Suivant →"   data-en="Next →">Suivant →</button>
       </div>
     </div>
   </section>
@@ -74,7 +107,10 @@
   <!-- ── NUMBERS ── -->
   <section id="sec-numbers" class="section">
     <div class="sec-header">
-      <div class="sec-title"><span>Section 2</span>Chiffres essentiels</div>
+      <div class="sec-title">
+        <span data-fr="Section 2" data-en="Section 2">Section 2</span>
+        <span class="sec-name" data-fr="Chiffres essentiels" data-en="Key numbers">Chiffres essentiels</span>
+      </div>
     </div>
     <div class="deck-wrap">
       <div class="counter-row">
@@ -87,10 +123,10 @@
           <div class="card-back"  id="back-numbers"></div>
         </div>
       </div>
-      <p class="hint" id="hint-numbers">Cliquez sur la carte pour révéler</p>
+      <p class="hint" id="hint-numbers"></p>
       <div class="card-nav">
-        <button class="btn-nav" id="btn-prev-numbers">← Précédent</button>
-        <button class="btn-nav" id="btn-next-numbers">Suivant →</button>
+        <button class="btn-nav" id="btn-prev-numbers" data-fr="← Précédent" data-en="← Previous">← Précédent</button>
+        <button class="btn-nav" id="btn-next-numbers" data-fr="Suivant →"   data-en="Next →">Suivant →</button>
       </div>
     </div>
   </section>
@@ -98,7 +134,10 @@
   <!-- ── PEOPLE ── -->
   <section id="sec-people" class="section">
     <div class="sec-header">
-      <div class="sec-title"><span>Section 3</span>Personnages historiques</div>
+      <div class="sec-title">
+        <span data-fr="Section 3" data-en="Section 3">Section 3</span>
+        <span class="sec-name" data-fr="Personnages historiques" data-en="Historical figures">Personnages historiques</span>
+      </div>
     </div>
     <div class="deck-wrap">
       <div class="counter-row">
@@ -111,18 +150,42 @@
           <div class="card-back"  id="back-people"></div>
         </div>
       </div>
-      <p class="hint" id="hint-people">Cliquez sur la carte pour révéler</p>
+      <p class="hint" id="hint-people"></p>
       <div class="card-nav">
-        <button class="btn-nav" id="btn-prev-people">← Précédent</button>
-        <button class="btn-nav" id="btn-next-people">Suivant →</button>
+        <button class="btn-nav" id="btn-prev-people" data-fr="← Précédent" data-en="← Previous">← Précédent</button>
+        <button class="btn-nav" id="btn-next-people" data-fr="Suivant →"   data-en="Next →">Suivant →</button>
       </div>
+    </div>
+  </section>
+
+  <!-- ── TIMELINE ── -->
+  <section id="sec-timeline" class="section">
+    <div class="sec-header">
+      <div class="sec-title">
+        <span data-fr="Section 4" data-en="Section 4">Section 4</span>
+        <span class="sec-name" data-fr="Chronologie de la France" data-en="French history timeline">Chronologie de la France</span>
+      </div>
+    </div>
+    <div class="timeline-wrap">
+      <div id="timeline-list"></div>
     </div>
   </section>
 
 </main>
 
 <footer class="footer">
-  Examen Civique · Carte de Résident (CR) · Basé sur les questions officielles du Ministère de l'Intérieur
+  <div class="footer-text">
+    <span data-fr="Examen Civique · Carte de Résident (CR) · Basé sur les questions officielles du Ministère de l'Intérieur"
+          data-en="Civic Exam · Resident Card (CR) · Based on official questions from the French Ministry of the Interior">
+      Examen Civique · Carte de Résident (CR) · Basé sur les questions officielles du Ministère de l'Intérieur
+    </span>
+  </div>
+  <div class="footer-tip">
+    <a href="https://en.tipeee.com/civic-exam-learning/" target="_blank" rel="noopener" class="tip-link">
+      <span class="tip-heart">♥</span>
+      <span data-fr="Soutenir ce projet sur Tipeee" data-en="Support this project on Tipeee">Soutenir ce projet sur Tipeee</span>
+    </a>
+  </div>
 </footer>
 
 <script src="script.js"></script>
