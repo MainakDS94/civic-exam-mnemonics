@@ -32,11 +32,25 @@
     </nav>
 
     <div class="lang-switch" id="lang-toggle" role="button" aria-label="Switch language" tabindex="0">
-      <span class="lang-flag" id="flag-fr">🇫🇷</span>
+      <span class="lang-flag" id="flag-fr" title="Français">
+        <svg width="22" height="16" viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg" style="border-radius:2px;display:block">
+          <rect width="7.33" height="16" fill="#002395"/>
+          <rect x="7.33" width="7.34" height="16" fill="#fff"/>
+          <rect x="14.67" width="7.33" height="16" fill="#ED2939"/>
+        </svg>
+      </span>
       <div class="lang-track">
         <div class="lang-thumb" id="lang-thumb"></div>
       </div>
-      <span class="lang-flag" id="flag-en">🇬🇧</span>
+      <span class="lang-flag" id="flag-en" title="English">
+        <svg width="22" height="16" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" style="border-radius:2px;display:block">
+          <rect width="60" height="40" fill="#012169"/>
+          <path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="6"/>
+          <path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="4"/>
+          <path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="10"/>
+          <path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="6"/>
+        </svg>
+      </span>
     </div>
 
   </div>
@@ -184,10 +198,11 @@
     </span>
   </div>
   <div class="footer-actions">
-    <div class="tipeee-wrap">
-      <a href="https://en.tipeee.com/civic-exam-learning" class="tipeee-project-cart-iframe" data-orientation="line" data-rewards="0">Support Civic exam learning on Tipeee</a>
-      <script async src="https://plugin.tipeee.com/widget.js" charset="utf-8"></script>
-    </div>
+    <a href="https://en.tipeee.com/civic-exam-learning" class="tipeee-project-cart-simple tip-link" data-orientation="grid" data-rewards="1">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      <span data-fr="Soutenir sur Tipeee" data-en="Support on Tipeee">Soutenir sur Tipeee</span>
+    </a>
+    <script async src="https://plugin.tipeee.com/widget.js" charset="utf-8"></script>
     <button class="report-btn" id="report-btn">
       <span>&#9888;</span>
       <span data-fr="Signaler une erreur" data-en="Report an error">Signaler une erreur</span>
