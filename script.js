@@ -378,11 +378,10 @@ function renderAll() {
 ════════════════════════════════════════ */
 
 function applyLang() {
-  /* Update all data-fr / data-en elements */
+  /* Update all data-fr / data-en text elements */
   document.querySelectorAll('[data-fr]').forEach(function(el) {
     var val = el.getAttribute('data-' + lang);
     if (val !== null) {
-      /* h1 and p use innerHTML for <em> / <br> support */
       if (el.tagName === 'H1' || el.tagName === 'P') {
         el.innerHTML = val;
       } else {
@@ -391,16 +390,25 @@ function applyLang() {
     }
   });
 
-  /* Update lang button */
-  var btn = document.getElementById('lang-toggle');
-  if (lang === 'fr') {
-    btn.querySelector('.lang-icon').textContent = '🇬🇧';
-    btn.querySelector('.lang-label').textContent = 'EN';
-    btn.title = 'Switch to English';
-  } else {
-    btn.querySelector('.lang-icon').textContent = '🇫🇷';
-    btn.querySelector('.lang-label').textContent = 'FR';
-    btn.title = 'Passer en français';
+  /* Update placeholder attributes */
+  document.querySelectorAll('[data-placeholder-fr]').forEach(function(el) {
+    el.placeholder = el.getAttribute('data-placeholder-' + lang) || '';
+  });
+
+  /* Update flag toggle visual state */
+  var thumb = document.getElementById('lang-thumb');
+  var flagFr = document.getElementById('flag-fr');
+  var flagEn = document.getElementById('flag-en');
+  if (thumb && flagFr && flagEn) {
+    if (lang === 'en') {
+      thumb.classList.add('en');
+      flagFr.classList.remove('active');
+      flagEn.classList.add('active');
+    } else {
+      thumb.classList.remove('en');
+      flagFr.classList.add('active');
+      flagEn.classList.remove('active');
+    }
   }
 
   /* Re-render cards with new language */
@@ -495,6 +503,36 @@ function showSection(id) {
    INIT
 ════════════════════════════════════════ */
 
+/* ════════════════════════════════════════
+   MODAL
+════════════════════════════════════════ */
+
+function openModal() {
+  var backdrop = document.getElementById('modal-backdrop');
+  backdrop.classList.add('open');
+  backdrop.setAttribute('aria-hidden', 'false');
+  document.getElementById('report-subject').focus();
+}
+
+function closeModal() {
+  var backdrop = document.getElementById('modal-backdrop');
+  backdrop.classList.remove('open');
+  backdrop.setAttribute('aria-hidden', 'true');
+  document.getElementById('report-subject').value = '';
+  document.getElementById('report-body').value = '';
+}
+
+function sendReport() {
+  var subject = document.getElementById('report-subject').value.trim();
+  var body    = document.getElementById('report-body').value.trim();
+  if (!subject && !body) { closeModal(); return; }
+  var mailto = 'mailto:mainak.iist2012@gmail.com' +
+    '?subject=' + encodeURIComponent('[Examen Civique] ' + (subject || 'Error report')) +
+    '&body='    + encodeURIComponent(body);
+  window.location.href = mailto;
+  closeModal();
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 
   /* Render initial state */
@@ -530,6 +568,30 @@ document.addEventListener('DOMContentLoaded', function() {
       e.stopPropagation();
       nextCard(id);
     });
+  });
+
+  /* Modal */
+  document.getElementById('report-btn').addEventListener('click', openModal);
+  document.getElementById('modal-close').addEventListener('click', closeModal);
+  document.getElementById('modal-cancel').addEventListener('click', closeModal);
+  document.getElementById('modal-send').addEventListener('click', sendReport);
+  document.getElementById('modal-backdrop').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  /* Lang toggle also fires on keyboard */
+  document.getElementById('lang-toggle').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      lang = (lang === 'fr') ? 'en' : 'fr';
+      applyLang();
+      if (document.getElementById('sec-timeline').classList.contains('active')) {
+        renderTimeline();
+      }
+    }
   });
 
   showSection('dates');
