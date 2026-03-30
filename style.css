@@ -119,15 +119,16 @@ body {
   box-shadow: 0 0 0 2px rgba(255,255,255,0.5);
 }
 .lang-flag {
-  font-size: 1.2rem;
-  line-height: 1;
+  display: flex;
+  align-items: center;
   transition: opacity 0.25s ease, transform 0.25s ease;
-  opacity: 0.45;
-  display: block;
+  opacity: 0.38;
+  filter: saturate(0.5);
 }
 .lang-flag.active {
   opacity: 1;
-  transform: scale(1.1);
+  filter: saturate(1);
+  transform: scale(1.08);
 }
 .lang-track {
   width: 36px;
@@ -436,26 +437,25 @@ body {
   flex-wrap: wrap;
 }
 
-.tipeee-wrap {
-  display: flex;
-  align-items: center;
-  /* The Tipeee widget sets its own height (~40px line mode).
-     We just need to contain and centre it. */
-}
-.tipeee-wrap iframe,
-.tipeee-wrap > a {
-  /* Fallback styling while the widget script loads */
+.tip-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
   color: var(--gold);
   text-decoration: none;
   font-size: 0.78rem;
-  font-weight: 500;
-  padding: 8px 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 8px 16px;
   border-radius: 99px;
-  border: 1.5px solid rgba(200,169,110,0.35);
+  border: 1.5px solid rgba(200,169,110,0.4);
+  transition: var(--ease);
 }
+.tip-link:hover {
+  background: rgba(200,169,110,0.12);
+  border-color: var(--gold);
+}
+.tip-link svg { flex-shrink: 0; }
 
 .report-btn {
   display: inline-flex;
