@@ -18,13 +18,6 @@ Site de révision pour l'examen civique (niveau Carte de Résident, CR) en Franc
 - Quiz à choix multiples
 - 100% responsive (mobile + desktop)
 
-## Déploiement GitHub Pages
-
-1. Forker ou uploader ce dépôt sur GitHub
-2. Aller dans **Settings → Pages**
-3. Choisir **Branch: main**, **Folder: / (root)**
-4. Sauvegarder — le site sera disponible sur `https://[username].github.io/[repo]/`
-
 ## Sources
 
 Questions officielles publiées par le Ministère de l'Intérieur sur [formation-civique.interieur.gouv.fr](https://formation-civique.interieur.gouv.fr)
