@@ -31,10 +31,13 @@
       <button class="nav-btn"        data-sec="timeline" data-fr="📜 Chronologie"   data-en="📜 Timeline">📜 Chronologie</button>
     </nav>
 
-    <button class="lang-btn" id="lang-toggle" aria-label="Switch language">
-      <span class="lang-icon">🇬🇧</span>
-      <span class="lang-label">EN</span>
-    </button>
+    <div class="lang-switch" id="lang-toggle" role="button" aria-label="Switch language" tabindex="0">
+      <span class="lang-flag" id="flag-fr">🇫🇷</span>
+      <div class="lang-track">
+        <div class="lang-thumb" id="lang-thumb"></div>
+      </div>
+      <span class="lang-flag" id="flag-en">🇬🇧</span>
+    </div>
 
   </div>
 </header>
@@ -180,13 +183,53 @@
       Examen Civique · Carte de Résident (CR) · Basé sur les questions officielles du Ministère de l'Intérieur
     </span>
   </div>
-  <div class="footer-tip">
-    <a href="https://en.tipeee.com/civic-exam-learning/" target="_blank" rel="noopener" class="tip-link">
-      <span class="tip-heart">♥</span>
-      <span data-fr="Soutenir ce projet sur Tipeee" data-en="Support this project on Tipeee">Soutenir ce projet sur Tipeee</span>
-    </a>
+  <div class="footer-actions">
+    <div class="tipeee-wrap">
+      <a href="https://en.tipeee.com/civic-exam-learning" class="tipeee-project-cart-iframe" data-orientation="line" data-rewards="0">Support Civic exam learning on Tipeee</a>
+      <script async src="https://plugin.tipeee.com/widget.js" charset="utf-8"></script>
+    </div>
+    <button class="report-btn" id="report-btn">
+      <span>&#9888;</span>
+      <span data-fr="Signaler une erreur" data-en="Report an error">Signaler une erreur</span>
+    </button>
   </div>
 </footer>
+
+<!-- ══ ERROR REPORT MODAL ══ -->
+<div class="modal-backdrop" id="modal-backdrop" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-header">
+      <h2 class="modal-title" id="modal-title"
+          data-fr="Signaler une erreur" data-en="Report an error">Signaler une erreur</h2>
+      <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-desc"
+         data-fr="Décrivez le problème et nous le corrigerons au plus vite."
+         data-en="Describe the issue and we will fix it as soon as possible.">
+        Décrivez le problème et nous le corrigerons au plus vite.
+      </p>
+      <label class="modal-label" for="report-subject"
+             data-fr="Sujet" data-en="Subject">Sujet</label>
+      <input class="modal-input" id="report-subject" type="text"
+             data-placeholder-fr="ex : Date incorrecte sur la carte 1789"
+             data-placeholder-en="e.g. Incorrect date on the 1789 card"
+             placeholder="ex : Date incorrecte sur la carte 1789">
+      <label class="modal-label" for="report-body"
+             data-fr="Description" data-en="Description">Description</label>
+      <textarea class="modal-textarea" id="report-body" rows="5"
+                data-placeholder-fr="Décrivez le problème en détail..."
+                data-placeholder-en="Describe the issue in detail..."
+                placeholder="Décrivez le problème en détail..."></textarea>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-cancel" id="modal-cancel"
+              data-fr="Annuler" data-en="Cancel">Annuler</button>
+      <button class="modal-send" id="modal-send"
+              data-fr="Envoyer" data-en="Send">Envoyer</button>
+    </div>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
