@@ -708,57 +708,79 @@ body {
 }
 
 /* ════════ MOBILE ════════ */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
 
-  /* Header: stack logo + nav vertically on very small screens */
+  /* ── Header: logo + lang on top row, nav fills second row ── */
   .header-inner {
     height: auto;
-    padding: 0.5rem 0.75rem;
+    padding: 0.5rem 0.75rem 0;
     flex-wrap: wrap;
-    gap: 0.4rem;
+    align-items: center;
+    gap: 0;
   }
-  .logo { order: 1; }
-  .lang-btn { order: 2; }
+
+  .logo { order: 1; flex: 1; }
+  .lang-switch { order: 2; }
+
+  /* Nav takes full width on its own row, all 4 buttons visible */
   .nav {
     order: 3;
     width: 100%;
-    justify-content: flex-start;
-    padding-bottom: 0.4rem;
+    flex: none;
+    justify-content: stretch;
+    overflow-x: visible;
+    padding: 4px 0 6px;
     gap: 2px;
   }
-  .nav-btn { font-size: 0.68rem; padding: 6px 7px; min-height: 36px; }
+
+  /* Each button grows equally to fill the full width */
+  .nav-btn {
+    flex: 1;
+    text-align: center;
+    font-size: 0.7rem;
+    padding: 7px 4px;
+    min-height: 36px;
+    /* Drop emoji on very small screens to save space */
+  }
+
   .logo-text { font-size: 0.88rem; }
   .logo-text small { display: none; }
+}
+
+@media (max-width: 480px) {
 
   /* Hero */
   .hero { padding: 2rem 1rem 1.75rem; }
-  .hero h1 { font-size: 1.6rem; }
+  .hero h1 { font-size: 1.55rem; }
   .hero-stats { gap: 1rem; }
-  .stat-num { font-size: 1.35rem; }
+  .stat-num { font-size: 1.3rem; }
+  .stat-label { font-size: 0.6rem; }
 
   /* Main */
   .main { padding: 1.5rem 0.875rem 4rem; }
-  .sec-title { font-size: 1.25rem; }
+  .sec-title { font-size: 1.2rem; }
 
   /* Cards */
-  .card-scene { height: 280px; }
-  .card-front, .card-back { padding: 1.25rem 1.1rem; }
-  .c-value { font-size: 1.5rem; }
-  .c-answer { font-size: 0.85rem; }
-  .c-memo { font-size: 0.75rem; }
+  .card-scene { height: 285px; }
+  .card-front, .card-back { padding: 1.25rem 1rem; }
+  .c-value { font-size: 1.45rem; }
+  .c-answer { font-size: 0.84rem; }
+  .c-memo { font-size: 0.74rem; }
 
-  /* Buttons */
-  .btn-nav { font-size: 0.82rem; padding: 12px 12px; }
+  /* Nav buttons */
+  .btn-nav { font-size: 0.82rem; padding: 12px 10px; }
 
   /* Timeline */
-  .tl-year { width: 72px; font-size: 0.78rem; padding-right: 10px; }
+  .tl-year { width: 68px; font-size: 0.76rem; padding-right: 10px; }
   .tl-content { padding-left: 10px; }
-  .tl-event { font-size: 0.82rem; }
-  .tl-memo { font-size: 0.72rem; }
+  .tl-event { font-size: 0.81rem; }
+  .tl-memo { font-size: 0.71rem; }
 }
 
 @media (max-width: 360px) {
   .card-scene { height: 300px; }
-  .nav-btn { font-size: 0.63rem; padding: 5px 5px; }
-  .tl-year { width: 58px; font-size: 0.72rem; }
+  .nav-btn { font-size: 0.62rem; padding: 6px 2px; }
+  .nav-emoji { display: none; }
+  .tl-year { width: 54px; font-size: 0.7rem; }
+  .hero h1 { font-size: 1.35rem; }
 }
