@@ -427,9 +427,16 @@ body {
   line-height: 1.6;
 }
 
-.footer-text { margin-bottom: 1rem; }
+.footer-text { margin-bottom: 1.25rem; }
 
 .footer-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-row {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -437,25 +444,53 @@ body {
   flex-wrap: wrap;
 }
 
-.tip-link {
+.footer-row--sub { margin-top: 2px; }
+
+.footer-divider {
+  color: rgba(255,255,255,0.2);
+  font-size: 1rem;
+  line-height: 1;
+  user-select: none;
+}
+
+/* Shared base for all footer buttons */
+.footer-btn {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  color: var(--gold);
-  text-decoration: none;
+  gap: 6px;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  text-decoration: none;
   padding: 8px 16px;
   border-radius: 99px;
-  border: 1.5px solid rgba(200,169,110,0.4);
   transition: var(--ease);
+  white-space: nowrap;
+  cursor: pointer;
 }
-.tip-link:hover {
+.footer-btn svg { flex-shrink: 0; }
+
+/* Gold variant — practice test */
+.footer-btn--gold {
+  color: var(--gold);
+  border: 1.5px solid rgba(200,169,110,0.4);
+}
+.footer-btn--gold:hover {
   background: rgba(200,169,110,0.12);
   border-color: var(--gold);
 }
-.tip-link svg { flex-shrink: 0; }
+
+/* Ghost variant — Tipeee */
+.footer-btn--ghost {
+  color: rgba(255,255,255,0.55);
+  border: 1.5px solid rgba(255,255,255,0.18);
+  font-weight: 500;
+}
+.footer-btn--ghost:hover {
+  color: rgba(255,255,255,0.85);
+  border-color: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.06);
+}
 
 .report-btn {
   display: inline-flex;
