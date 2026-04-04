@@ -4,20 +4,24 @@ Site de révision pour l'examen civique (niveau Carte de Résident, CR) en Franc
 
 ## Contenu
 
-- **Dates** — 18 dates historiques clés avec mnémotechniques
-- **Chiffres** — 19 nombres essentiels (institutions, géographie, examen)
+- **Dates** — 27 dates et lois historiques clés avec mnémotechniques
+- **Chiffres** — 18 nombres essentiels (institutions, géographie, examen)
 - **Personnages** — 21 figures historiques françaises
-- **Chronologie** — frise chronologique complète
+- **Chronologie** — frise chronologique complète et interactive
 
 ## Fonctionnalités
 
-- Flashcards interactives (recto/verso)
-- Suivi de progression (connu / à revoir)
-- Filtres par catégorie
-- Mode tableau (vue d'ensemble)
-- Quiz à choix multiples
-- 100% responsive (mobile + desktop)
+- Flashcards interactives (cliquez pour révéler recto/verso)
+- Barre de progression par section
+- Chronologie visuelle avec codes couleur par thème
+- Bilingue français 🇫🇷 / anglais 🇬🇧 (bascule par drapeau)
+- 100% responsive (mobile + desktop, testé sur Google Pixel)
+- Bouton "Signaler une erreur" avec envoi par email
+- Lien vers le simulateur d'examen [40sur40.com/exam](https://40sur40.com/exam)
+- Favicon bichon frisé 🐶
 
 ## Sources
 
 Questions officielles publiées par le Ministère de l'Intérieur sur [formation-civique.interieur.gouv.fr](https://formation-civique.interieur.gouv.fr)
+
+Simulateur d'examen : [40sur40.com/exam](https://40sur40.com/exam)
