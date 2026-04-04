@@ -597,10 +597,12 @@ document.addEventListener('DOMContentLoaded', function() {
   renderAll();
   applyLang();
 
-  document.querySelector('[data-sec="dates"]').addEventListener('click',    function() { showSection('dates'); });
-  document.querySelector('[data-sec="numbers"]').addEventListener('click',  function() { showSection('numbers'); });
-  document.querySelector('[data-sec="people"]').addEventListener('click',   function() { showSection('people'); });
-  document.querySelector('[data-sec="timeline"]').addEventListener('click', function() { showSection('timeline'); renderTimeline(); });
+  document.querySelector('[data-sec="dates"]').addEventListener('click',        function() { showSection('dates'); });
+  document.querySelector('[data-sec="numbers"]').addEventListener('click',      function() { showSection('numbers'); });
+  document.querySelector('[data-sec="people"]').addEventListener('click',       function() { showSection('people'); });
+  document.querySelector('[data-sec="timeline"]').addEventListener('click',     function() { showSection('timeline'); renderTimeline(); });
+  document.querySelector('[data-sec="institutions"]').addEventListener('click', function() { showSection('institutions'); });
+  document.querySelector('[data-sec="symboles"]').addEventListener('click',     function() { showSection('symboles'); });
 
   document.getElementById('lang-toggle').addEventListener('click', function() {
     lang = (lang === 'fr') ? 'en' : 'fr';
