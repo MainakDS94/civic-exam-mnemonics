@@ -27,9 +27,19 @@ var UI = {
 
 var DATES = [
   {
+    front: '1412–1431',
+    fr: { back: "Jeanne d'Arc mène les armées françaises à la victoire contre les Anglais (Orléans, 1429). Brûlée vive à Rouen en 1431.", memo: "Épée + bûcher + Orléans. La première résistante de France." },
+    en: { back: "Joan of Arc leads French armies to victory against the English (Orléans, 1429). Burned at the stake in Rouen in 1431.", memo: "Sword + stake + Orléans. France's first resistance fighter." }
+  },
+  {
     front: '1789',
-    fr: { back: 'Révolution française, Prise de la Bastille (14 juillet), Déclaration des droits de l\'homme (26 août)', memo: '1-7-8-9 → Liberté née ! La date fondatrice de tout.' },
+    fr: { back: "Révolution française, Prise de la Bastille (14 juillet), Déclaration des droits de l'homme (26 août)", memo: '1-7-8-9 → Liberté née ! La date fondatrice de tout.' },
     en: { back: 'French Revolution, Storming of the Bastille (14 July), Declaration of the Rights of Man (26 Aug)', memo: '1-7-8-9 → Liberty born! The founding date of everything.' }
+  },
+  {
+    front: '1791',
+    fr: { back: "Olympe de Gouges écrit la Déclaration des droits de la femme et de la citoyenne", memo: "1791 → Gouges réécrit la DDHC au féminin. Guillotinée deux ans plus tard en 1793." },
+    en: { back: "Olympe de Gouges writes the Declaration of the Rights of Woman and the Female Citizen", memo: "1791 → Gouges rewrites the Declaration for women. Guillotined two years later in 1793." }
   },
   {
     front: '1792',
@@ -47,9 +57,24 @@ var DATES = [
     en: { back: 'Napoleon becomes Emperor — Civil Code created', memo: '1804 → Napoleon + Civil Code = legal modernity. Still in use today.' }
   },
   {
+    front: '1881',
+    fr: { back: "Jules Ferry rend l'école primaire gratuite", memo: "1881 → Première loi Ferry : l'école gratuite pour tous." },
+    en: { back: 'Jules Ferry makes primary school free', memo: '1881 → First Ferry law: free school for everyone.' }
+  },
+  {
+    front: '1882',
+    fr: { back: "Jules Ferry rend l'école laïque et obligatoire", memo: "1882 → Deuxième loi Ferry. Avec 1881 : Gratuit + Laïque + Obligatoire." },
+    en: { back: "Jules Ferry makes school secular and compulsory", memo: "1882 → Second Ferry law. With 1881: Free + Secular + Compulsory." }
+  },
+  {
     front: '1905',
     fr: { back: "Loi de séparation des Églises et de l'État — fondement de la laïcité", memo: "1905 → L'État et l'Église divorcent. Dieu va au privé." },
     en: { back: 'Law separating Church and State — foundation of secularism (laïcité)', memo: '1905 → The State and the Church divorce. Religion becomes a private matter.' }
+  },
+  {
+    front: '1913',
+    fr: { back: "Naissance d'Albert Camus à Mondovi, Algérie. Auteur de L'Étranger et La Peste. Prix Nobel de littérature en 1957.", memo: "1913 → Camus naît en Algérie, écrit en France, pense l'absurde." },
+    en: { back: "Albert Camus born in Mondovi, Algeria. Author of The Stranger and The Plague. Nobel Prize in Literature 1957.", memo: "1913 → Camus born in Algeria, writes in France, thinks the absurd." }
   },
   {
     front: '1914–1918',
@@ -77,6 +102,11 @@ var DATES = [
     en: { back: 'Creation of the United Nations after WWII', memo: '1945 → The war ends, the UN begins.' }
   },
   {
+    front: '1949',
+    fr: { back: "Simone de Beauvoir publie Le Deuxième Sexe — « On ne naît pas femme, on le devient »", memo: "1949 → La bible du féminisme moderne. Beau-voir = voir les inégalités." },
+    en: { back: 'Simone de Beauvoir publishes The Second Sex — "One is not born, but rather becomes, a woman"', memo: "1949 → The bible of modern feminism. See the inequality." }
+  },
+  {
     front: '1951',
     fr: { back: 'Création de la CECA — 1ère étape de la construction européenne', memo: "1951 → L'acier unit l'Europe pour la 1ère fois." },
     en: { back: 'Creation of the ECSC — first step in European integration', memo: '1951 → Steel unites Europe for the first time.' }
@@ -92,6 +122,11 @@ var DATES = [
     en: { back: 'President elected by direct universal suffrage', memo: '1962 → Citizens directly choose their president.' }
   },
   {
+    front: '1975',
+    fr: { back: "Simone Veil fait adopter la loi sur l'IVG — avortement légalisé en France", memo: "1975 → Veil + IVG = droits des femmes inscrits dans la loi. Panthéon en 2018." },
+    en: { back: "Simone Veil passes the abortion law — abortion legalised in France", memo: "1975 → Veil + abortion law = women's rights enshrined in law. Panthéon in 2018." }
+  },
+  {
     front: '1981',
     fr: { back: 'Abolition de la peine de mort (Mitterrand / Badinter)', memo: '1981 → Plus de guillotine en France.' },
     en: { back: 'Abolition of the death penalty (Mitterrand / Badinter)', memo: '1981 → No more guillotine in France.' }
@@ -102,9 +137,19 @@ var DATES = [
     en: { back: 'Maastricht Treaty (7 February) — foundation of the European Union', memo: "1992 → Europe gets its name: the European Union." }
   },
   {
+    front: '1992 ★',
+    fr: { back: "Depuis le traité de Maastricht, les citoyens de l'UE peuvent voter aux élections locales du pays de l'UE où ils sont installés", memo: "1992 → Citoyenneté européenne : voter là où on vit, même à l'étranger dans l'UE." },
+    en: { back: "Since the Maastricht Treaty, EU citizens can vote in local elections of the EU country where they live", memo: "1992 → European citizenship: vote where you live, even abroad within the EU." }
+  },
+  {
     front: '2002',
     fr: { back: "L'euro devient la monnaie officielle en France", memo: '2002 → Euro dans ta poche, deux zéros dans la date !' },
     en: { back: 'The euro becomes the official currency in France', memo: '2002 → Euro in your pocket, two zeros in the year!' }
+  },
+  {
+    front: '2004',
+    fr: { back: "La loi du 15 mars 2004 interdit les signes religieux ostensibles dans les lycées publics", memo: "2004 → Pas de voile, croix ou kipa visibles à l'école publique. Extension de la laïcité de 1905." },
+    en: { back: "The law of 15 March 2004 bans conspicuous religious symbols in public secondary schools", memo: "2004 → No visible veil, cross or kipa in state schools. Extension of the 1905 secularism law." }
   },
   {
     front: '2020',
@@ -378,7 +423,6 @@ function renderAll() {
 ════════════════════════════════════════ */
 
 function applyLang() {
-  /* Update all data-fr / data-en text elements */
   document.querySelectorAll('[data-fr]').forEach(function(el) {
     var val = el.getAttribute('data-' + lang);
     if (val !== null) {
@@ -390,13 +434,11 @@ function applyLang() {
     }
   });
 
-  /* Update placeholder attributes */
   document.querySelectorAll('[data-placeholder-fr]').forEach(function(el) {
     el.placeholder = el.getAttribute('data-placeholder-' + lang) || '';
   });
 
-  /* Update flag toggle visual state */
-  var thumb = document.getElementById('lang-thumb');
+  var thumb  = document.getElementById('lang-thumb');
   var flagFr = document.getElementById('flag-fr');
   var flagEn = document.getElementById('flag-en');
   if (thumb && flagFr && flagEn) {
@@ -411,7 +453,6 @@ function applyLang() {
     }
   }
 
-  /* Re-render cards with new language */
   renderAll();
 }
 
@@ -442,26 +483,44 @@ function prevCard(id) {
    TIMELINE
 ════════════════════════════════════════ */
 
-/* Category colours for timeline dots */
 var TL_COLORS = {
   histoire:     '#C8A96E',
-  laïcité:      '#1A3A6B',
+  laicite:      '#1A3A6B',
   droits:       '#9B2335',
   monde:        '#5A7A4A',
   europe:       '#2E6B9E',
-  institutions: '#7A4A8A'
+  institutions: '#7A4A8A',
+  culture:      '#D85A30'
 };
 
-/* Assign a category to each date for the dot colour */
 var DATE_CATS = [
-  'histoire','histoire','histoire','histoire',
-  'laïcité',
-  'histoire','histoire','histoire',
-  'droits',
-  'monde',
-  'europe','institutions','institutions',
-  'droits',
-  'europe','europe','europe','europe'
+  'histoire',      /* 1412–1431  Jeanne d'Arc                    */
+  'histoire',      /* 1789       Révolution                      */
+  'droits',        /* 1791       Olympe de Gouges                */
+  'histoire',      /* 1792       République                      */
+  'histoire',      /* 1793       Louis XVI                       */
+  'histoire',      /* 1804       Napoléon                        */
+  'institutions',  /* 1881       Ferry gratuite                  */
+  'institutions',  /* 1882       Ferry laïque                    */
+  'laicite',       /* 1905       Laïcité                         */
+  'culture',       /* 1913       Camus naissance                 */
+  'histoire',      /* 1914–1918  WWI                             */
+  'histoire',      /* 18 juin 1940 De Gaulle                     */
+  'histoire',      /* 1939–1945  WWII                            */
+  'droits',        /* 1944       Femmes votent                   */
+  'monde',         /* 1945       ONU                             */
+  'culture',       /* 1949       Beauvoir                        */
+  'europe',        /* 1951       CECA                            */
+  'institutions',  /* 1958       Ve République                   */
+  'institutions',  /* 1962       Suffrage universel              */
+  'droits',        /* 1975       Veil IVG                        */
+  'droits',        /* 1981       Peine de mort                   */
+  'europe',        /* 1992       Maastricht                      */
+  'europe',        /* 1992 ★    Citoyenneté UE / vote local      */
+  'europe',        /* 2002       Euro                            */
+  'laicite',       /* 2004       Signes religieux à l'école      */
+  'europe',        /* 2020       Brexit                          */
+  'europe'         /* 9 mai      Journée de l'Europe             */
 ];
 
 function renderTimeline() {
@@ -470,9 +529,9 @@ function renderTimeline() {
 
   var html = '';
   DATES.forEach(function(item, i) {
-    var cat   = DATE_CATS[i] || 'histoire';
-    var color = TL_COLORS[cat] || '#C8A96E';
-    var t     = item[lang];
+    var cat    = DATE_CATS[i] || 'histoire';
+    var color  = TL_COLORS[cat] || '#C8A96E';
+    var t      = item[lang];
     var isLast = i === DATES.length - 1;
 
     html +=
@@ -498,10 +557,6 @@ function showSection(id) {
   document.getElementById('sec-' + id).classList.add('active');
   document.querySelector('[data-sec="' + id + '"]').classList.add('active');
 }
-
-/* ════════════════════════════════════════
-   INIT
-════════════════════════════════════════ */
 
 /* ════════════════════════════════════════
    MODAL
@@ -533,29 +588,28 @@ function sendReport() {
   closeModal();
 }
 
+/* ════════════════════════════════════════
+   INIT
+════════════════════════════════════════ */
+
 document.addEventListener('DOMContentLoaded', function() {
 
-  /* Render initial state */
   renderAll();
   applyLang();
 
-  /* Section nav */
   document.querySelector('[data-sec="dates"]').addEventListener('click',    function() { showSection('dates'); });
   document.querySelector('[data-sec="numbers"]').addEventListener('click',  function() { showSection('numbers'); });
   document.querySelector('[data-sec="people"]').addEventListener('click',   function() { showSection('people'); });
   document.querySelector('[data-sec="timeline"]').addEventListener('click', function() { showSection('timeline'); renderTimeline(); });
 
-  /* Language toggle */
   document.getElementById('lang-toggle').addEventListener('click', function() {
     lang = (lang === 'fr') ? 'en' : 'fr';
     applyLang();
-    /* Re-render timeline if it's currently visible */
     if (document.getElementById('sec-timeline').classList.contains('active')) {
       renderTimeline();
     }
   });
 
-  /* Wire each deck */
   ['dates', 'numbers', 'people'].forEach(function(id) {
     document.getElementById('card-' + id).addEventListener('click', function() {
       flipCard(id);
@@ -570,7 +624,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  /* Modal */
   document.getElementById('report-btn').addEventListener('click', openModal);
   document.getElementById('modal-close').addEventListener('click', closeModal);
   document.getElementById('modal-cancel').addEventListener('click', closeModal);
@@ -582,7 +635,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.key === 'Escape') closeModal();
   });
 
-  /* Lang toggle also fires on keyboard */
   document.getElementById('lang-toggle').addEventListener('keydown', function(e) {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
