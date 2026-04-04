@@ -27,10 +27,12 @@
     </div>
 
     <nav class="nav">
-      <button class="nav-btn active" data-sec="dates"    data-fr="📅 Dates"         data-en="📅 Dates"><span class="nav-emoji">📅</span> Dates</button>
-      <button class="nav-btn"        data-sec="numbers"  data-fr="🔢 Chiffres"      data-en="🔢 Numbers"><span class="nav-emoji">🔢</span> <span data-fr="Chiffres" data-en="Numbers">Chiffres</span></button>
-      <button class="nav-btn"        data-sec="people"   data-fr="👤 Personnages"   data-en="👤 People"><span class="nav-emoji">👤</span> <span data-fr="Personnages" data-en="People">Personnages</span></button>
-      <button class="nav-btn"        data-sec="timeline" data-fr="📜 Chronologie"   data-en="📜 Timeline"><span class="nav-emoji">📜</span> <span data-fr="Chronologie" data-en="Timeline">Chronologie</span></button>
+      <button class="nav-btn active" data-sec="dates"        ><span class="nav-emoji">📅</span> <span data-fr="Dates"        data-en="Dates"       >Dates</span></button>
+      <button class="nav-btn"        data-sec="numbers"      ><span class="nav-emoji">🔢</span> <span data-fr="Chiffres"     data-en="Numbers"     >Chiffres</span></button>
+      <button class="nav-btn"        data-sec="people"       ><span class="nav-emoji">👤</span> <span data-fr="Personnages"  data-en="People"      >Personnages</span></button>
+      <button class="nav-btn"        data-sec="timeline"     ><span class="nav-emoji">📜</span> <span data-fr="Chronologie"  data-en="Timeline"    >Chronologie</span></button>
+      <button class="nav-btn"        data-sec="institutions" ><span class="nav-emoji">🏛️</span> <span data-fr="Institutions" data-en="Institutions">Institutions</span></button>
+      <button class="nav-btn"        data-sec="symboles"     ><span class="nav-emoji">🎼</span> <span data-fr="Symboles"     data-en="Symbols"     >Symboles</span></button>
     </nav>
 
     <div class="lang-switch" id="lang-toggle" role="button" aria-label="Switch language" tabindex="0">
@@ -190,6 +192,272 @@
     </div>
   </section>
 
+  <!-- ── INSTITUTIONS ── -->
+  <section id="sec-institutions" class="section">
+    <div class="sec-header">
+      <div class="sec-title">
+        <span data-fr="Section 5" data-en="Section 5">Section 5</span>
+        <span class="sec-name" data-fr="Institutions de la République" data-en="French Institutions">Institutions de la République</span>
+      </div>
+    </div>
+    <div class="inst-wrap">
+
+      <!-- Legend -->
+      <div class="inst-legend">
+        <div class="inst-leg-item"><div class="inst-leg-dot" style="background:#7F77DD"></div> <span data-fr="Exécutif" data-en="Executive">Exécutif</span></div>
+        <div class="inst-leg-item"><div class="inst-leg-dot" style="background:#378ADD"></div> <span data-fr="Législatif" data-en="Legislative">Législatif</span></div>
+        <div class="inst-leg-item"><div class="inst-leg-dot" style="background:#1D9E75"></div> <span data-fr="Collectivités" data-en="Local govt">Collectivités</span></div>
+        <div class="inst-leg-item"><div class="inst-leg-dot" style="background:#888780"></div> <span data-fr="État nommé" data-en="State appointed">État nommé</span></div>
+        <div class="inst-leg-item"><div class="inst-leg-dot" style="background:#D4537E"></div> <span data-fr="Judiciaire" data-en="Judicial">Judiciaire</span></div>
+      </div>
+
+      <!-- Citoyens -->
+      <div class="inst-card inst-people">
+        <div class="inst-card-icon">🗳️</div>
+        <div class="inst-card-title" data-fr="Citoyens français" data-en="French citizens">Citoyens français</div>
+        <div class="inst-card-sub" data-fr="Élisent directement le Président, les Députés et les conseils locaux" data-en="Directly elect the President, Deputies and local councils">Élisent directement le Président, les Députés et les conseils locaux</div>
+        <div class="inst-tag" data-fr="Suffrage universel · 18 ans" data-en="Universal suffrage · age 18">Suffrage universel · 18 ans</div>
+      </div>
+
+      <div class="inst-arrows-row">
+        <div class="inst-arrow-col"><div class="inst-arr-line"></div><div class="inst-arr-head"></div></div>
+        <div class="inst-arrow-col"><div class="inst-arr-line"></div><div class="inst-arr-head"></div></div>
+      </div>
+
+      <!-- National level -->
+      <div class="inst-divider"><div class="inst-div-line"></div><div class="inst-div-label" data-fr="Niveau national" data-en="National level">Niveau national</div><div class="inst-div-line"></div></div>
+
+      <div class="inst-split">
+        <!-- Executive column -->
+        <div class="inst-col">
+          <div class="inst-col-label" style="color:#534AB7" data-fr="Pouvoir exécutif" data-en="Executive power">Pouvoir exécutif</div>
+          <div class="inst-card inst-exec">
+            <div class="inst-card-icon">👤</div>
+            <div class="inst-card-title" data-fr="Président de la République" data-en="President of the Republic">Président de la République</div>
+            <div class="inst-card-sub" data-fr="Chef d'État · Élysée · 5 ans" data-en="Head of State · Élysée · 5 years">Chef d'État · Élysée · 5 ans</div>
+            <div class="inst-tag" data-fr="Élu directement" data-en="Directly elected">Élu directement</div>
+          </div>
+          <div class="inst-conn"><div class="inst-conn-line"></div><div class="inst-conn-lbl" data-fr="nomme" data-en="appoints">nomme</div><div class="inst-conn-line"></div><div class="inst-conn-arrow"></div></div>
+          <div class="inst-card inst-exec">
+            <div class="inst-card-icon">🏛️</div>
+            <div class="inst-card-title" data-fr="Premier ministre" data-en="Prime minister">Premier ministre</div>
+            <div class="inst-card-sub" data-fr="Chef du Gouvernement · Matignon" data-en="Head of Government · Matignon">Chef du Gouvernement · Matignon</div>
+            <div class="inst-tag" data-fr="Nommé par le Président" data-en="Appointed by the President">Nommé par le Président</div>
+          </div>
+          <div class="inst-conn"><div class="inst-conn-line"></div><div class="inst-conn-lbl" data-fr="dirige" data-en="leads">dirige</div><div class="inst-conn-line"></div><div class="inst-conn-arrow"></div></div>
+          <div class="inst-card inst-exec">
+            <div class="inst-card-icon">📋</div>
+            <div class="inst-card-title" data-fr="Gouvernement" data-en="Government">Gouvernement</div>
+            <div class="inst-card-sub" data-fr="Ministres · applique les lois" data-en="Ministers · implements laws">Ministres · applique les lois</div>
+            <div class="inst-tag" data-fr="Nommés par le Président" data-en="Appointed by the President">Nommés par le Président</div>
+          </div>
+        </div>
+
+        <!-- Legislative column -->
+        <div class="inst-col">
+          <div class="inst-col-label" style="color:#185FA5" data-fr="Pouvoir législatif · Le Parlement" data-en="Legislative power · Parliament">Pouvoir législatif · Le Parlement</div>
+          <div class="inst-card inst-legis" style="margin-bottom:10px">
+            <div class="inst-card-icon">🏛️</div>
+            <div class="inst-card-title" data-fr="Assemblée nationale" data-en="National Assembly">Assemblée nationale</div>
+            <div class="inst-card-sub" data-fr="577 députés · 5 ans · Palais Bourbon" data-en="577 deputies · 5 years · Palais Bourbon">577 députés · 5 ans · Palais Bourbon</div>
+            <div class="inst-tag" data-fr="Élus directement" data-en="Directly elected">Élus directement</div>
+          </div>
+          <div style="text-align:center;font-size:0.65rem;color:var(--text3);margin:2px 0">+</div>
+          <div class="inst-card inst-legis">
+            <div class="inst-card-icon">🏛️</div>
+            <div class="inst-card-title" data-fr="Sénat" data-en="Senate">Sénat</div>
+            <div class="inst-card-sub" data-fr="348 sénateurs · 6 ans · Palais du Luxembourg" data-en="348 senators · 6 years · Palais du Luxembourg">348 sénateurs · 6 ans · Palais du Luxembourg</div>
+            <div class="inst-tag" data-fr="Élus indirectement" data-en="Indirectly elected">Élus indirectement</div>
+          </div>
+          <div class="inst-info-box">
+            <div class="inst-info-title" data-fr="Rôle du Parlement" data-en="Role of Parliament">Rôle du Parlement</div>
+            <div class="inst-info-sub" data-fr="Vote les lois · contrôle le Gouvernement · adopte le budget" data-en="Passes laws · scrutinises the Government · adopts the budget">Vote les lois · contrôle le Gouvernement · adopte le budget</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Judicial -->
+      <div class="inst-col-label" style="color:#993556;margin:1rem 0 0.5rem;text-align:center" data-fr="Pouvoir judiciaire · indépendant" data-en="Judicial power · independent">Pouvoir judiciaire · indépendant</div>
+      <div class="inst-grid3">
+        <div class="inst-card inst-jud">
+          <div class="inst-card-title" data-fr="Conseil constitutionnel" data-en="Constitutional Council">Conseil constitutionnel</div>
+          <div class="inst-card-sub" data-fr="Veille à la Constitution" data-en="Guards the Constitution">Veille à la Constitution</div>
+        </div>
+        <div class="inst-card inst-jud">
+          <div class="inst-card-title" data-fr="Justice" data-en="Justice">Justice</div>
+          <div class="inst-card-sub" data-fr="3 niveaux · pénal · civil · administratif" data-en="3 levels · criminal · civil · administrative">3 niveaux · pénal · civil · administratif</div>
+        </div>
+        <div class="inst-card inst-jud">
+          <div class="inst-card-title" data-fr="Défenseur des droits" data-en="Rights Defender">Défenseur des droits</div>
+          <div class="inst-card-sub" data-fr="Protège les citoyens" data-en="Protects citizens">Protège les citoyens</div>
+        </div>
+      </div>
+
+      <!-- Territorial -->
+      <div class="inst-divider" style="margin-top:1.5rem"><div class="inst-div-line"></div><div class="inst-div-label" data-fr="Organisation territoriale" data-en="Territorial organisation">Organisation territoriale</div><div class="inst-div-line"></div></div>
+
+      <div class="inst-split">
+        <!-- Elected local -->
+        <div class="inst-col">
+          <div class="inst-col-label" style="color:#0F6E56" data-fr="Élus locaux" data-en="Local elected officials">Élus locaux</div>
+          <div class="inst-card inst-terr">
+            <div class="inst-card-icon">🗺️</div>
+            <div class="inst-card-title" data-fr="Région" data-en="Region">Région</div>
+            <div class="inst-card-sub" data-fr="18 régions · conseil régional · 6 ans" data-en="18 regions · regional council · 6 years">18 régions · conseil régional · 6 ans</div>
+            <div class="inst-tag" data-fr="Formation · lycées · économie" data-en="Training · high schools · economy">Formation · lycées · économie</div>
+          </div>
+          <div class="inst-conn"><div class="inst-conn-line"></div><div class="inst-conn-arrow"></div></div>
+          <div class="inst-card inst-terr">
+            <div class="inst-card-icon">📍</div>
+            <div class="inst-card-title" data-fr="Département" data-en="Department">Département</div>
+            <div class="inst-card-sub" data-fr="101 dépts · conseil départemental · 6 ans" data-en="101 depts · departmental council · 6 years">101 dépts · conseil départemental · 6 ans</div>
+            <div class="inst-tag" data-fr="Action sociale · RSA" data-en="Social welfare · RSA">Action sociale · RSA</div>
+          </div>
+          <div class="inst-conn"><div class="inst-conn-line"></div><div class="inst-conn-arrow"></div></div>
+          <div class="inst-card inst-terr">
+            <div class="inst-card-icon">🏘️</div>
+            <div class="inst-card-title" data-fr="Commune" data-en="Commune">Commune</div>
+            <div class="inst-card-sub" data-fr="~35 000 communes · 6 ans" data-en="~35,000 communes · 6 years">~35 000 communes · 6 ans</div>
+            <div class="inst-tag" data-fr="État civil · voirie · crèches" data-en="Civil registry · roads · nurseries">État civil · voirie · crèches</div>
+          </div>
+          <div class="inst-conn"><div class="inst-conn-line"></div><div class="inst-conn-arrow"></div></div>
+          <div class="inst-card inst-terr">
+            <div class="inst-card-icon">🎖️</div>
+            <div class="inst-card-title" data-fr="Maire" data-en="Mayor">Maire</div>
+            <div class="inst-card-sub" data-fr="Élu 6 ans · tête de la commune" data-en="Elected 6 years · head of the commune">Élu 6 ans · tête de la commune</div>
+            <div class="inst-tag" data-fr="Permis · état civil · police mun." data-en="Permits · civil registry · local police">Permis · état civil · police mun.</div>
+          </div>
+        </div>
+
+        <!-- State appointed -->
+        <div class="inst-col">
+          <div class="inst-col-label" style="color:#5F5E5A" data-fr="Représentants de l'État" data-en="State representatives">Représentants de l'État</div>
+          <div class="inst-card inst-state">
+            <div class="inst-card-icon">🏢</div>
+            <div class="inst-card-title" data-fr="Préfet de région" data-en="Regional prefect">Préfet de région</div>
+            <div class="inst-card-sub" data-fr="Nommé par l'État · représente Paris" data-en="Appointed by State · represents Paris">Nommé par l'État · représente Paris</div>
+            <div class="inst-tag" data-fr="Coordonne les politiques nationales" data-en="Coordinates national policies">Coordonne les politiques nationales</div>
+          </div>
+          <div style="height:10px"></div>
+          <div class="inst-card inst-state">
+            <div class="inst-card-icon">🏢</div>
+            <div class="inst-card-title" data-fr="Préfet de département" data-en="Departmental prefect">Préfet de département</div>
+            <div class="inst-card-sub" data-fr="Nommé par l'État" data-en="Appointed by State">Nommé par l'État</div>
+            <div class="inst-tag" data-fr="Titres de séjour · ordre public" data-en="Residence permits · public order">Titres de séjour · ordre public</div>
+          </div>
+          <div class="inst-note" data-fr="Les préfets ne sont pas élus — ils sont nommés par le Conseil des ministres. Ils représentent l'État central face aux élus locaux." data-en="Prefects are not elected — they are appointed by the Council of Ministers. They represent the central State alongside elected local officials.">Les préfets ne sont pas élus — ils sont nommés par le Conseil des ministres. Ils représentent l'État central face aux élus locaux.</div>
+        </div>
+      </div>
+
+    </div><!-- /inst-wrap -->
+  </section>
+
+  <!-- ── HYMNES & SYMBOLES ── -->
+  <section id="sec-symboles" class="section">
+    <div class="sec-header">
+      <div class="sec-title">
+        <span data-fr="Section 6" data-en="Section 6">Section 6</span>
+        <span class="sec-name" data-fr="Hymnes &amp; Symboles" data-en="Anthems &amp; Symbols">Hymnes &amp; Symboles</span>
+      </div>
+    </div>
+
+    <div class="sym-wrap">
+
+      <!-- DEVISE -->
+      <div class="sym-section-label"><div class="sym-line"></div><div class="sym-label" data-fr="La devise de la République" data-en="The motto of the Republic">La devise de la République</div><div class="sym-line"></div></div>
+      <div class="sym-devise">
+        <div class="sym-devise-part sym-d-blue">
+          <div class="sym-devise-word">Liberté</div>
+          <div class="sym-devise-meaning" data-fr="Droits civils, liberté d'expression, de conscience, de circulation" data-en="Civil rights, freedom of speech, conscience, movement">Droits civils, liberté d'expression, de conscience, de circulation</div>
+        </div>
+        <div class="sym-devise-part sym-d-white">
+          <div class="sym-devise-word">Égalité</div>
+          <div class="sym-devise-meaning" data-fr="Mêmes droits pour tous, sans distinction d'origine, de sexe ou de religion" data-en="Same rights for all, regardless of origin, sex or religion">Mêmes droits pour tous, sans distinction d'origine, de sexe ou de religion</div>
+        </div>
+        <div class="sym-devise-part sym-d-red">
+          <div class="sym-devise-word">Fraternité</div>
+          <div class="sym-devise-meaning" data-fr="Solidarité entre citoyens, cohésion nationale" data-en="Solidarity between citizens, national cohesion">Solidarité entre citoyens, cohésion nationale</div>
+        </div>
+      </div>
+      <div class="sym-card">
+        <div class="sym-card-body" data-fr="Inscrite sur le fronton de tous les bâtiments publics. Née pendant la Révolution française de 1789. Inscrite dans la Constitution (article 2)." data-en="Inscribed on the facade of all public buildings. Born during the French Revolution of 1789. Enshrined in the Constitution (article 2).">Inscrite sur le fronton de tous les bâtiments publics. Née pendant la Révolution française de 1789. Inscrite dans la Constitution (article 2).</div>
+        <div class="sym-exam-pill">⭐ <span data-fr="À l'examen : « Quelle est la devise de la France ? »" data-en="Exam: &laquo;What is France's motto?&raquo;">À l'examen : « Quelle est la devise de la France ? »</span></div>
+      </div>
+
+      <!-- DRAPEAU -->
+      <div class="sym-section-label"><div class="sym-line"></div><div class="sym-label" data-fr="Le drapeau tricolore" data-en="The tricolour flag">Le drapeau tricolore</div><div class="sym-line"></div></div>
+      <img src="french-flag.svg" alt="Drapeau français" style="width:100%;max-width:320px;display:block;margin:0 auto 10px;border-radius:6px;border:1px solid var(--border)">
+      <div class="sym-card">
+        <div class="sym-card-body" data-fr="Né de la Révolution française (1789). Le bleu et le rouge sont les couleurs de Paris, le blanc représente la monarchie. Adopté officiellement en 1794." data-en="Born of the French Revolution (1789). Blue and red are the colours of Paris, white represents the monarchy. Officially adopted in 1794.">Né de la Révolution française (1789). Le bleu et le rouge sont les couleurs de Paris, le blanc représente la monarchie. Adopté officiellement en 1794.</div>
+        <div class="sym-exam-pill">⭐ <span data-fr="À l'examen : couleurs dans l'ordre → Bleu, Blanc, Rouge" data-en="Exam: colours in order → Blue, White, Red">À l'examen : couleurs dans l'ordre → Bleu, Blanc, Rouge</span></div>
+      </div>
+
+      <!-- MARIANNE -->
+      <div class="sym-section-label"><div class="sym-line"></div><div class="sym-label" data-fr="Marianne — symbole de la République" data-en="Marianne — symbol of the Republic">Marianne — symbole de la République</div><div class="sym-line"></div></div>
+      <div class="sym-card sym-marianne-card">
+        <img src="marianne.svg" alt="Marianne — logo officiel de la République française" class="sym-marianne-img">
+        <ul class="sym-fact-list">
+          <li class="sym-fact-item"><div class="sym-fact-dot"></div><span data-fr="Femme au bonnet phrygien — symbole de liberté" data-en="Woman with Phrygian cap — symbol of liberty">Femme au bonnet phrygien — symbole de liberté</span></li>
+          <li class="sym-fact-item"><div class="sym-fact-dot"></div><span data-fr="Représente la République française et ses valeurs" data-en="Represents the French Republic and its values">Représente la République française et ses valeurs</span></li>
+          <li class="sym-fact-item"><div class="sym-fact-dot"></div><span data-fr="Apparaît sur les documents officiels, timbres, pièces" data-en="Appears on official documents, stamps and coins">Apparaît sur les documents officiels, timbres, pièces</span></li>
+          <li class="sym-fact-item"><div class="sym-fact-dot"></div><span data-fr="Présente dans toutes les mairies de France" data-en="Present in every town hall in France">Présente dans toutes les mairies de France</span></li>
+          <li class="sym-fact-item"><div class="sym-fact-dot"></div><span data-fr="Logo officiel de l'État depuis 2020 (Marque de l'État)" data-en="Official State logo since 2020 (Marque de l'État)">Logo officiel de l'État depuis 2020 (Marque de l'État)</span></li>
+        </ul>
+        <div class="sym-exam-pill" style="margin-top:12px">⭐ <span data-fr="À l'examen : « Que représente Marianne ? » → La République française et ses valeurs" data-en="Exam: &laquo;What does Marianne represent?&raquo; → The French Republic and its values">À l'examen : « Que représente Marianne ? » → La République française et ses valeurs</span></div>
+      </div>
+
+      <!-- MARSEILLAISE -->
+      <div class="sym-section-label"><div class="sym-line"></div><div class="sym-label" data-fr="La Marseillaise — hymne national" data-en="La Marseillaise — national anthem">La Marseillaise — hymne national</div><div class="sym-line"></div></div>
+      <div class="sym-card">
+        <div class="sym-chips">
+          <div class="sym-chip"><strong data-fr="Composée en" data-en="Composed in">Composée en</strong> 1792</div>
+          <div class="sym-chip"><strong data-fr="Auteur" data-en="Author">Auteur</strong> Rouget de Lisle</div>
+          <div class="sym-chip"><strong data-fr="Hymne depuis" data-en="Anthem since">Hymne depuis</strong> 1795</div>
+          <div class="sym-chip"><strong data-fr="Contexte" data-en="Context">Contexte</strong> <span data-fr="Guerres révolutionnaires" data-en="Revolutionary wars">Guerres révolutionnaires</span></div>
+        </div>
+
+        <div class="sym-lyrics-label" data-fr="1er couplet — à connaître" data-en="1st verse — must know">1er couplet — à connaître</div>
+        <div class="sym-lyrics">
+          <span class="sym-hl" data-fr="Allons enfants de la Patrie," data-en="Allons enfants de la Patrie,">Allons enfants de la Patrie,</span><br>
+          <span data-fr="Le jour de gloire est arrivé !" data-en="Le jour de gloire est arrivé !">Le jour de gloire est arrivé !</span><br>
+          <span data-fr="Contre nous de la tyrannie," data-en="Contre nous de la tyrannie,">Contre nous de la tyrannie,</span><br>
+          <span data-fr="L'étendard sanglant est levé." data-en="L'étendard sanglant est levé.">L'étendard sanglant est levé.</span>
+        </div>
+
+        <div class="sym-lyrics-label" data-fr="Le refrain — à connaître absolument" data-en="The chorus — absolutely must know">Le refrain — à connaître absolument</div>
+        <div class="sym-lyrics">
+          <span class="sym-hl" data-fr="Aux armes, citoyens," data-en="Aux armes, citoyens,">Aux armes, citoyens,</span><br>
+          <span class="sym-hl" data-fr="Formez vos bataillons," data-en="Formez vos bataillons,">Formez vos bataillons,</span><br>
+          <span data-fr="Marchons, marchons !" data-en="Marchons, marchons !">Marchons, marchons !</span><br>
+          <span data-fr="Qu'un sang impur" data-en="Qu'un sang impur">Qu'un sang impur</span><br>
+          <span data-fr="Abreuve nos sillons !" data-en="Abreuve nos sillons !">Abreuve nos sillons !</span>
+        </div>
+
+        <div class="sym-exam-pill">⭐ <span data-fr="À l'examen : « Allons enfants de la Patrie… » et « Aux armes […] ! Formez vos bataillons »" data-en="Exam: &laquo;Allons enfants de la Patrie…&raquo; and &laquo;Aux armes […]! Formez vos bataillons&raquo;">À l'examen : « Allons enfants de la Patrie… » et « Aux armes […] ! Formez vos bataillons »</span></div>
+      </div>
+
+      <!-- EU ANTHEM -->
+      <div class="sym-section-label"><div class="sym-line"></div><div class="sym-label" data-fr="L'hymne européen — Ode à la Joie" data-en="The European anthem — Ode to Joy">L'hymne européen — Ode à la Joie</div><div class="sym-line"></div></div>
+
+      <!-- EU Flag -->
+      <img src="eu-flag.svg" alt="Drapeau européen" style="width:100%;max-width:320px;display:block;margin:0 auto 10px;border-radius:6px;border:1px solid var(--border)">
+
+      <div class="sym-card sym-eu-note">
+        <strong>Ode à la Joie</strong> — <span data-fr="4e mouvement de la 9e Symphonie de" data-en="4th movement of the 9th Symphony by">4e mouvement de la 9e Symphonie de</span> <strong>Ludwig van Beethoven</strong> (1824). <span data-fr="Adoptée comme hymne européen en" data-en="Adopted as the European anthem in">Adoptée comme hymne européen en</span> <strong>1985</strong>. <em data-fr="Pas de paroles officielles dans aucune langue — c'est une musique instrumentale universelle." data-en="No official lyrics in any language — it is a universal instrumental piece.">Pas de paroles officielles dans aucune langue — c'est une musique instrumentale universelle.</em>
+      </div>
+      <div class="sym-card">
+        <div class="sym-chips">
+          <div class="sym-chip"><strong data-fr="Compositeur" data-en="Composer">Compositeur</strong> Beethoven</div>
+          <div class="sym-chip"><strong data-fr="Adopté" data-en="Adopted">Adopté</strong> 1985</div>
+          <div class="sym-chip"><strong data-fr="Paroles" data-en="Lyrics">Paroles</strong> <span data-fr="Aucune (officielle)" data-en="None (official)">Aucune (officielle)</span></div>
+          <div class="sym-chip"><strong data-fr="Drapeau UE" data-en="EU flag">Drapeau UE</strong> <span data-fr="Bleu + 12 étoiles" data-en="Blue + 12 stars">Bleu + 12 étoiles</span></div>
+        </div>
+        <div class="sym-exam-pill">⭐ <span data-fr="À l'examen : « Quel est l'hymne de l'UE ? » → L'Ode à la Joie (Beethoven, 1985)" data-en="Exam: &laquo;What is the EU anthem?&raquo; → Ode to Joy (Beethoven, 1985)">À l'examen : « Quel est l'hymne de l'UE ? » → L'Ode à la Joie (Beethoven, 1985)</span></div>
+      </div>
+
+    </div><!-- /sym-wrap -->
+  </section>
+
 </main>
 
 <footer class="footer">
@@ -200,33 +468,24 @@
     </span>
   </div>
   <div class="footer-actions">
-
     <div class="footer-row">
-
-      <!-- Practice test -->
       <a href="https://40sur40.com/exam" target="_blank" rel="noopener" class="footer-btn footer-btn--gold">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
         <span data-fr="Passer un test blanc" data-en="Take a practice test">Passer un test blanc</span>
       </a>
-
       <span class="footer-divider">·</span>
-
-      <!-- Tipeee -->
       <a href="https://en.tipeee.com/civic-exam-mnemonics" class="tipeee-project-cart-simple footer-btn footer-btn--ghost" data-orientation="line" data-rewards="1" style="color:rgba(255,255,255,0.55);font-family:'DM Sans',sans-serif;font-weight:500;font-size:0.78rem;text-decoration:none;display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:99px;border:1.5px solid rgba(255,255,255,0.18);">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
         <span data-fr="Soutenir sur Tipeee" data-en="Support on Tipeee">Soutenir sur Tipeee</span>
       </a>
       <script async src="https://plugin.tipeee.com/widget.js" charset="utf-8"></script>
-
     </div>
-
     <div class="footer-row footer-row--sub">
       <button class="report-btn" id="report-btn">
         <span>&#9888;</span>
         <span data-fr="Signaler une erreur" data-en="Report an error">Signaler une erreur</span>
       </button>
     </div>
-
   </div>
 </footer>
 
@@ -234,34 +493,19 @@
 <div class="modal-backdrop" id="modal-backdrop" aria-hidden="true">
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal-header">
-      <h2 class="modal-title" id="modal-title"
-          data-fr="Signaler une erreur" data-en="Report an error">Signaler une erreur</h2>
+      <h2 class="modal-title" id="modal-title" data-fr="Signaler une erreur" data-en="Report an error">Signaler une erreur</h2>
       <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
     </div>
     <div class="modal-body">
-      <p class="modal-desc"
-         data-fr="Décrivez le problème et nous le corrigerons au plus vite."
-         data-en="Describe the issue and we will fix it as soon as possible.">
-        Décrivez le problème et nous le corrigerons au plus vite.
-      </p>
-      <label class="modal-label" for="report-subject"
-             data-fr="Sujet" data-en="Subject">Sujet</label>
-      <input class="modal-input" id="report-subject" type="text"
-             data-placeholder-fr="ex : Date incorrecte sur la carte 1789"
-             data-placeholder-en="e.g. Incorrect date on the 1789 card"
-             placeholder="ex : Date incorrecte sur la carte 1789">
-      <label class="modal-label" for="report-body"
-             data-fr="Description" data-en="Description">Description</label>
-      <textarea class="modal-textarea" id="report-body" rows="5"
-                data-placeholder-fr="Décrivez le problème en détail..."
-                data-placeholder-en="Describe the issue in detail..."
-                placeholder="Décrivez le problème en détail..."></textarea>
+      <p class="modal-desc" data-fr="Décrivez le problème et nous le corrigerons au plus vite." data-en="Describe the issue and we will fix it as soon as possible.">Décrivez le problème et nous le corrigerons au plus vite.</p>
+      <label class="modal-label" for="report-subject" data-fr="Sujet" data-en="Subject">Sujet</label>
+      <input class="modal-input" id="report-subject" type="text" data-placeholder-fr="ex : Date incorrecte sur la carte 1789" data-placeholder-en="e.g. Incorrect date on the 1789 card" placeholder="ex : Date incorrecte sur la carte 1789">
+      <label class="modal-label" for="report-body" data-fr="Description" data-en="Description">Description</label>
+      <textarea class="modal-textarea" id="report-body" rows="5" data-placeholder-fr="Décrivez le problème en détail..." data-placeholder-en="Describe the issue in detail..." placeholder="Décrivez le problème en détail..."></textarea>
     </div>
     <div class="modal-footer">
-      <button class="modal-cancel" id="modal-cancel"
-              data-fr="Annuler" data-en="Cancel">Annuler</button>
-      <button class="modal-send" id="modal-send"
-              data-fr="Envoyer" data-en="Send">Envoyer</button>
+      <button class="modal-cancel" id="modal-cancel" data-fr="Annuler" data-en="Cancel">Annuler</button>
+      <button class="modal-send" id="modal-send" data-fr="Envoyer" data-en="Send">Envoyer</button>
     </div>
   </div>
 </div>
