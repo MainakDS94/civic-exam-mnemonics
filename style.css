@@ -722,25 +722,27 @@ body {
   .logo { order: 1; flex: 1; }
   .lang-switch { order: 2; }
 
-  /* Nav takes full width on its own row, all 4 buttons visible */
+  /* Nav wraps into two rows of 3 when there are 6 buttons */
   .nav {
     order: 3;
     width: 100%;
     flex: none;
-    justify-content: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
     overflow-x: visible;
     padding: 4px 0 6px;
     gap: 2px;
   }
 
-  /* Each button grows equally to fill the full width */
+  /* Each button takes ~1/3 width so 3 fit per row */
   .nav-btn {
-    flex: 1;
+    flex: 1 1 30%;
+    min-width: 0;
+    max-width: calc(33.333% - 2px);
     text-align: center;
     font-size: 0.7rem;
     padding: 7px 4px;
     min-height: 36px;
-    /* Drop emoji on very small screens to save space */
   }
 
   .logo-text { font-size: 0.88rem; }
